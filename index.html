@@ -1,0 +1,5054 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>React Tutorial</title>
+
+<link href="style.css" rel="stylesheet"></link>
+
+	<link href="https://drive.google.com/uc?id=1goFc09j7jJkkYnCTvGvj-TKVsMbV2Xrz" rel="stylesheet"></link>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+ <link href="https://getbootstrap.com/docs/5.3/examples/cheatsheet/" rel="canonical"></link>
+  </head>
+<body>
+   <!--Custom styles for this template-->
+   <span class="bg-body-tertiary">
+
+ 
+<aside class="bd-aside sticky-xl-top text-body-secondary align-self-start mb-3 mb-xl-5 px-2">
+   <br />
+     <nav class="small" id="toc">
+      <h4>On This Pages</h4>
+      <ul class="list-unstyled ps-3 ide sid">
+
+  <li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form1"
+    >Tic-Tac-Toe</a
+  >
+</li>
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form2"
+    >What will we program?</a
+  >
+</li>
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form3"
+  >
+    prepare for the tutorial</a
+  >
+</li>
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form4"
+  >
+    Comprehensive View</a
+  >
+</li>
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form5"
+  >
+    Board construction stage</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form6"
+  >
+    Passing data through props</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form7"
+  >
+    interactive components</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form8"
+  >
+    Well let's continue our game</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form9"
+  >
+    Let's get it right</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form10"
+  >
+    The significance of immutability</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form11"
+  >
+    Alternating turns</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form12"
+  >
+   Announcing the winner</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form13"
+  >
+    Incorporating</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form14"
+  >
+    Keeping a record</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form15"
+  >
+   Elevating state</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form16"
+  >
+    Displaying </a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form17"
+  >
+    Selecting a key</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form18"
+  >
+   Implementing</a
+  >
+</li>
+
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form19"
+  >
+   Final tidying up</a
+  >
+</li>
+<li>
+  <a
+    class="d-inline-flex align-items-center rounded text-decoration-none nav-link"
+    href="#form20"
+  >
+   Wrapping up </a
+  >
+</li>
+
+
+</ul>
+      <hr /> <h4></h4>
+<!--<ul class="list-unstyled id">
+    <li class="my-2">
+        
+        <ul class="list-unstyled ps-3">
+
+
+            <li class="bas">JS Tutorial</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-home.html">JS HOME</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-introduction.html">JS Introduction</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-wher-to.html">JS Where To</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-output.html">JS Output</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-statement.html">JS Statements</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-syntax.html">JS Syntax</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-comment.html">JS Comments</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-variables.html">JS Variables</a></li>
+            <li style="background-color: rgba(237, 5, 243, 0.29);"><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-let.html">JS Let</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-cont.html">JS Const</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-operateur.html">JS Operators</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-arithmetic.html">JS Arithmetic</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-assignment.html">JS Assignment</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-data-types.html">JS Data Types</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function.html">JS Functions</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-objects.html">JS Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-event.html">JS Events</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-strings.html">JS Strings</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-strings-methods.html">JS String Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-string-search.html">JS String Search</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-string-templates.html">JS String Templates</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-numbers.html">JS Numbers</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-bigint.html">JS BigInt</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-tutorial.html">JS Number Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-number-properties.html">JS Number Properties</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-arrays.html">JS Arrays</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-array-methods.html">JS Array Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-aray-sort.html">JS Array Sort</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-aray-iteration.html">JS Array Iteration</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-aray-const.html">JS Array Const</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dats.html">JS Dates</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-date-formats.html">JS Date Formats</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-date-get-methods.html">JS Date Get Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-tutorial.html">JS Date Set Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-math.html">JS Math</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-random.html">JS Random</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-booleans.html">JS Booleans</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-comparisons.html">JS Comparisons</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-if-else.html">JS If Else</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-szitch.html">JS Switch</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-for.html">JS Loop For</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-for-in.html">JS Loop For In</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-for-of.html">JS Loop For Of</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-while.html">JS Loop While</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-break.html">JS Break</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-iterables.html">JS Iterables</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-sets.html">JS Sets</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-maps.html">JS Maps</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-typof.html">JS Typeof</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-type-convertion.html">JS Type Conversion</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-bitwise.html">JS Bitwise</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-regexp.html">JS RegExp</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-precedence.html">JS Precedence</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-errors.html">JS Errors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-scope.html">JS Scope</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-hoisting.html">JS Hoisting</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-strict-mode.html">JS Strict Mode</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-this-keyword.html">JS this Keyword</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-arroz-function.html">JS Arrow Function</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-classes.html">JS Classes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-modules.html">JS Modules</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json.html">JS JSON</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-debugging.html">JS Debugging</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-style-guide.html">JS Style Guide</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-best-pratices.html">JS Best Practices</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-mistakes.html">JS Mistakes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-performance.html">JS Performance</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-reserved-words.html">JS Reserved Words</a></li>
+        </ul>
+
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Versions</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-virsions.html">JS Versions</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2009.html">JS 2009 (ES5)</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2015.html">JS 2015 (ES6)</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2016.html">JS 2016</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2017.html">JS 2017</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2018.html">JS 2018</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2019.html">JS 2019</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2020.html">JS 2020</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2021-2022.html">JS 2021/2022</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ie-edge.html">JS IE / Edge</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-history.html">JS History</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Objects</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-definitions.html">Object Definitions</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-properties.html">Object Properties</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-methods.html">Object Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-display.html">Object Display</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-accessoirs.html">Object Accessors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-constructors.html">Object Constructors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-prototypes.html"> Object Prototypes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-iterables.html">Object Iterables</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-sets.html">Object Sets</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-maps.html"> Object Maps</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-reference.html"> Object Reference</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS Functions</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-definitions.html">Function Definitions</a>
+            </li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-parameters.html"> Function Parameters</a>
+            </li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-invocations.html">Function Invocation</a>
+            </li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-call.html"> Function Call</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-apply.html"> Function Apply</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-bind.html"> Function Bind</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-closures.html"> Function Closures</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Classes</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-class-into.html">Class Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-class-inheritance.html">Class Inheritance</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-class-static.html"> Class Static</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Async</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-callbacks.html"> JS Callbacks</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-asynchronous.html"> JS Asynchronous</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-promises.html">JS Promises</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-async-await">JS Async/Await</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS HTML DOM</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-intro.html">DOM Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-methods.html"> DOM Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-document.html"> DOM Document</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-element.html"> DOM Elements</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-html.html">DOM HTML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-domforms.html"> DOM Forms</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-css.html"> DOM CSS</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-animations.html"> DOM Animations</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-events.html">DOM Events</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-event-listener.html"> DOM Event Listener</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-navigetion.html"> DOM Navigation</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-nodes.html"> DOM Nodes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-collections.html"> DOM Collections</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-node-listes.html"> DOM Node Lists</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS Browser BOM</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-window.html"> JS Window</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-screen.html">JS Screen</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-location.html"> JS Location</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-history.html"> JS History</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-navigateur.html"> JS Navigator</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-popup-alert.html"> JS Popup Alert</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-timing.html"> JS Timing</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-cookies.html"> JS Cookies</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS Web APIs</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-api-intro.html"> Web API Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-forms-api.html"> Web Forms API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-history-api.html"> Web History API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-storage-api.html"> Web Storage API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-worker-api.html"> Web Worker API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-fetch-api.html"> Web Fetch API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-geolocation-api.html"> Web Geolocation API</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS AJAX</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-intro.html"> AJAX Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-xmlhttp.html"> AJAX XMLHttp</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-request.html"> AJAX Request</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-response.html"> AJAX Response</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-xml-file.html"> AJAX XML File</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-php.html"> AJAX PHP</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-asp.html"> AJAX ASP</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-database.html"> AJAX Database</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-applications.html"> AJAX Applications</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-examples.html"> AJAX Examples</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS JSON</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-intro.html">JSON Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-syntax.html">JSON Syntax</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-vs-xml.html">JSON vs XML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-data-types.html">JSON Data Types</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-parse.html">JSON Parse</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-stringify.html">JSON Stringify</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-objects.html">JSON Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-arrys.html">JSON Arrays</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-server.html">JSON Server</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-php.html">JSON PHP</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-html.html">JSON HTML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-jsonp.html">JSON JSONP</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS vs jQuery</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-selecteurs.html">jQuery Selectors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-html.html">jQuery HTML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-css.html">jQuery CSS</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-dom.html">jQuery DOM</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Graphics</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-graphics.html">JS Graphics</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-canvas.html">JS Canvas</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-plotly.html">JS Plotly</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-chartjs.html">JS Chartjs</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-google-chart.html">JS Google Chart</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-d3-js.html">JS D3 js</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Examples</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-examples.html">JS Examples</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-dom.html">JS HTML DOM</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-input.html">JS HTML Input</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-object.html">JS HTML Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-event.html">JS HTML Events</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-browser.html">JS Browser</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-editeus.html">JS Editor</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-exercises.html">JS Exercises</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-quiz.html">JS Quiz</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-bootcamp.html"> JS Bootcamp</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-certificate.html">JS Certificate</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS References</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-opjects.html">JavaScript Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/html-dom-opjects.html">HTML DOM Objects</a></li>
+        </ul>
+
+    </li>
+</ul>-->
+<style>
+
+    .di{
+        font-weight: 700;
+    }
+</style>
+    </nav>
+</aside>
+   
+   
+       
+       
+<div class="bd-cheatsheet container-fluid bg-body">
+   
+    <section id="content">
+      <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3"><a class="nav-link" href="#cont"></a></h2>
+        <!--React Tutorial-->
+       <article class="my-3" id="form">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+              
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h1 class="text-center">How to build a game Tic-Tac-Toe by React</h1><br /><br />
+                    <button class="btn btn-primary" type="button"><a class="nav-link" href="https://www.new-poste.info/p/javascript-variables.html"> ❮ Previous</a></button>
+                   <button class="btn btn-primary" style="float: right;" type="button">
+                    <a class="nav-link" href="https://www.new-poste.info/p/javascript-cont.html"> Next ❯</a></button><br /><br />
+      
+                  
+                  
+                  
+                  
+ <hr />
+                </div>
+            </div>
+        </article>
+       
+       <!--Tutorial: Tic-Tac-Toe-->
+       <article class="my-3" id="form1">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Tutorial: Tic-Tac-Toe</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>introduction</h2><br /><br />
+                  <p>Welcome to this tutorial, we are going to put all our intellectual power into building a delectable little game called <span class="sas">Tic-Tac-Toe</span>.<br>
+Well, for this tutorial, you don't need to have a background in the <span class="sas">React</span> process.<br>
+One of the advantages of this tutorial is that it will prepare you to acquire and learn the basic teachings of building any <span class="sas">React</span> application.<br>
+Oh and Kada will give you a full and deep understanding of the <span class="sas">React</span> program
+Note that this tutorial is powered by <span class="sas">React</span> itself</p>
+                  
+                  <div class="note"><h2><i class="bi bi-card-list"></i></h2>
+                    In any field there were several ways to learn.<br>
+There is learning by experience and building something real in reality and that is the pro approach.<br>
+And there are those who prefer to get acquainted with the basics and concepts step by step.
+                    
+                  </div>
+             <ul>
+               To make things easier, we divided the tutorial into sections, which are as follows:
+               <li>First, <a href="#step1">prepare for the tutorial</a>. My father will give us a starting point in following the steps of good learning</li>
+               <li>Knowing the components, supports, and condition, gives you a <a href="#step2">comprehensive view</a> of the React</li>
+               <li>One of the advantages of React is that it has several methods that help programmers to develop it. We have updated this  <a href="#step3">tutorial for the game Tic-Tacto</a></li>
+               <li>One of React's strengths is <a href="#step4">the time travel</a> feature that will give you an in-depth understanding of this lunatic</li>
+              
+                  </ul>
+                  <hr />
+              </div>
+         </div>
+         </article>
+      <!--What will we program?-->
+       <article class="my-3" id="form2">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+              <h2>What will we program?</h2>
+                
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>What will we program?</h2><br /><br />
+                   
+                  <p>With React, we will program an interactive game called Tic Tac Toe.<br>
+In the beginning, you can take an overview of the game code and what it will look like in the final form</p>
+
+
+ <br />
+                 
+                    <div class="container-fixed source"><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1Gs12FiJJZOpovCofk9ZduWemceLhs72t"><i class="bi bi-arrow-bar-down">Download</i></a></button>
+<pre><code class="html sid"> 
+
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+import { useState } from 'react';
+
+function Square({ value, onSquareClick }) {
+  return (
+    &lt;button className="square" onClick={onSquareClick}>
+      {value}
+    &lt;/button>
+  );
+}
+
+function Board({ xIsNext, squares, onPlay }) {
+  function handleClick(i) {
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    const nextSquares = squares.slice();
+    if (xIsNext) {
+      nextSquares[i] = 'X';
+    } else {
+      nextSquares[i] = 'O';
+    }
+    onPlay(nextSquares);
+  }
+
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner) {
+    status = 'Winner: ' + winner;
+  } else {
+    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  }
+
+  return (
+    &lt;>
+      &lt;div className="status">{status}&lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+        &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+        &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+      &lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+        &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+        &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+      &lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+        &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+        &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+      &lt;/div>
+    &lt;/>
+  );
+}
+
+let App = function Game() {
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMove, setCurrentMove] = useState(0);
+  const xIsNext = currentMove % 2 === 0;
+  const currentSquares = history[currentMove];
+
+  function handlePlay(nextSquares) {
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
+  }
+
+  function jumpTo(nextMove) {
+    setCurrentMove(nextMove);
+  }
+
+  const moves = history.map((squares, move) => {
+    let description;
+    if (move > 0) {
+      description = 'Go to move #' + move;
+    } else {
+      description = 'Go to game start';
+    }
+    return (
+      &lt;li key={move}>
+        &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+      &lt;/li>
+    );
+  });
+
+  return (
+    &lt;div className="game">
+      &lt;div className="game-board">
+        &lt;Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      &lt;/div>
+      &lt;div className="game-info">
+        &lt;ol>{moves}&lt;/ol>
+      &lt;/div>
+    &lt;/div>
+  );
+}
+
+function calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i &lt; lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>
+
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/tutorial-tic-tac-toe.html" target="_blank" >Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <iframe src="https://poste.new-poste.info/p/tutorial-tic-tac-toe_13.html" width="500" heigth="350"></iframe>           
+                  <ul>
+                    <li>
+                      This code seems complex, its coding is illogical, as it is not similar to other programming languages, do not worry, my friend, this is React, and we are here to simplify and understand everything about this strange creature
+                    </li>
+                    <li>
+                      You saw the above code, take a look at it. Download the file in the format .... Try it in your code editor. Play with it a little. There are several things that are renewed. Everything you will learn in this lesson is wonderful, isn't that
+                    </li>
+                    <li>Our next step is to get you started with the simplest model in this tutorial. Let's go wild and challenge the hard!
+                    </li>
+                  </ul>
+                  
+                  
+                  
+                  
+                                   
+                  
+                  
+                 <hr />
+                <p></p><p></p></div>
+            </div>
+    </article>
+        
+      <!--prepare for the tutorial-->
+        <article class="my-3" id="form3">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <h3> prepare for the tutorial</h3>
+                
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                      <h2>prepare for the tutorial</h2>
+                  <p>Hey, you .
+If you are using a code editor on your computer, this is fine.
+                    And if you are not, then click here and use it <a href="https://codepen.io/new-poste/pen/PoxMwjm">CodePen.io</a>  It is the best among the editors, so let's start below.</p>
+                  
+                   <div class="container-fixed source"><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1TZMr7lPYjq6VaEdA5KaRFAzNOeZL4qUR"><i class="bi bi-arrow-bar-down">Download</i></a></button>
+<pre><code class="html sid"> 
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+let App = function Square() {
+  return &lt;button className="square">X&lt;/button>;
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>
+
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/tutorial-tic-tac-toe.html" target="_blank" >Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <iframe src="https://poste.new-poste.info/p/react-step-1.html" width="500" heigth="350"></iframe>   
+                 <br> 
+                  <div class="note">>>>>> This setup is not suitable for production. 
+                    Only use it in development! </div>
+                  <h3 class="notis">This is the source code for any html</h3>
+                   <div class="container-fixed source">
+<pre><code class="html sid"> 
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;/html>
+                            </code>
+</pre>
+                  </div> 
+                  <br>
+                  <h3 class="notis">This is the source code for Javascript react web</h3>
+                   <div class="container-fixed source">
+<pre><code class="html sid"> 
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <h3 class="notis">This is the source code for Javascript react web to creat button (x)</h3>
+                   <div class="container-fixed source">
+<pre><code class="html sid"> 
+
+
+&lt;script type="text/babel" data-type="module">
+&lt;The React import infomation on the link below -->
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+&lt;let is a variable javascript go <a href="https://www.new-poste.info/p/javascript-let.html">her fo more information</a>  -->
+let App = function Square() {
+  return &lt;button className="square">X&lt;/button>;
+}
+
+&lt;let is a variable javascript go <a href="https://www.new-poste.info/p/javascript-cont.html">her fo more information</a>
+const root = createRoot(document.getElementById('root'));
+root.render(
+&lt;The React element -->
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <h3 class="notis">This is the source code for Javascript react web</h3>
+                   <div class="container-fixed source">
+<pre><code class="html sid"> 
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+                            </code>
+</pre>
+                  </div>
+                  
+                  <br>
+                  <div class="note">You can also follow this tutorial using your local development environment. To do this, you need to:
+                    <a href="#">Go Her for this tutorials</a>
+                  </div>
+                  
+                  
+           <hr />
+                </div>
+            </div>
+        </article>
+         <!--Comprehensive View-->
+        <article class="my-3" id="form4">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <h3>Comprehensive View</h3>
+                
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                      <h2>Comprehensive View</h2>
+                  <p>Well, we have identified all the necessary work environments, and we have come to know how to work with React without installing anything. Now let us check out this amazing environment.</p>
+                  <h2>Let's start the journey of deepening in the code</h2>
+                  
+                   <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Square() {
+  return &lt;button className="square">X&lt;/button>;
+}
+                            </code>
+</pre>
+                  </div>
+                 <h3> The expected result from the browser, which is a box with a check inside it (x)</h3>
+                  <iframe src="https://poste.new-poste.info/p/react-step-1.html" width="500" heigth="350"></iframe>
+                  <br>
+                  <p>Well, we'll take a look at the code by detailing and interpreting it</p>
+                  <h2><a class="nav-link" href="#app">App.js</a> </h2>
+                  <div id="app">
+                    The code in <span class="sas">App.js</span> creates a component. In React, a component is a piece of reusable code that represents a part of a user interface. Components are used to render, manage, and update the UI elements in your application. Let’s look at the component line by line to see what’s going on:
+                  <br>
+                              <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+<span class="notis">export default function Square() {</span>
+  return &lt;button className="square">X&lt;/button>;
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <ul>
+                    <li>The first line of code is a <span class="sas">square</span> function.</li>
+                    <li>To export a file in javascript we use keyword <span class="sas">export</span> since it grants access from outside the file</li>
+                    <li>The <span class="sas">default</span>  keyword it is responsible for allowing other files to access</li>
+                  </ul>
+                    <br>
+                      <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Square() {
+  <span class="notis">return &lt;button className="square">X&lt;/button>;</span>
+}
+                            </code>
+</pre>
+                  </div>
+                    <br>
+                    <ul>
+                      <li>Now we come to the second line, which contains <span class="sas">return</span></li>
+                      <li>In javascript it <span class="sas">return</span> keyword returns everything that comes next to the caller</li>
+                      <li> <span class="sas">&lt;button></span> is a JSX element.</li>
+                      <li><span class="sas">JSX</span> JSX is a JavaScript extension that allows creation of DOM trees using an XML-like syntax.</li>
+                      <li>In React we switch from <span class="sas">JS</span> to <span class="sas">JSX</span> and likewise in <span class="sas">CSS</span> we switch to using the identifier <span class="sas">class</span> instead of <span class="sas">className</span></li>
+                      <li>In <span class="sas">React</span> to include content within <span class="sas">JSX</span> you use the <span class="sas">HTML</span> tag.(<span class="sas">&lt;button>&lt;/button></span>)</li>
+                    </ul>
+                    <h2>style</h2>
+                    <p>It is responsible for output patterns in the browser and it controls dimensions, body, fonts and colors.<br>In order for the interface that the user sees to appear consecutive and consistent.<br>
+                      In React, if you are using the browser feature, the link attached at the top is who determines which manages React tasks.<br>
+But if you go deeper into React and use the commands feature with the code editor, the application will merge a file javascript Inside React, you will learn more about all of this. Just follow the lesson.
+                    </p>
+                    <br>
+                      <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles.css';
+
+import App from './App';
+                            </code>
+</pre>
+                  </div>
+                    <br>
+                    <h3>Now we will move on to the import files, the most important parts of React</h3>
+                    <ol>
+                      <li>Import the react file</li>
+                       <li>The library responsible for interacting with browsers (React DOM) </li>
+                       <li>Here is a file CSS which we talked about previously</li>
+                       <li>the component you created in App.js.</li>
+                      
+                      
+                    </ol>
+                    <br>
+                    <p> The final file index.html is the one that compiles all the main components in order to be viewed by the browser</p>
+                    
+                  </div>
+                  <br>
+                  
+                  
+                  
+                  <hr />
+                </div>
+            </div>
+        </article>
+      <!--Board construction stage-->
+       <article class="my-3" id="form5">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Board construction stage</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Board construction stage</h2><br />
+                  <p>Now we will complete the project.<br>
+                 We have only one square in the browser, we need nine other squares, so we will try to achieve this<br>
+                    
+                    
+                  </p>
+                    <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Square() {
+ <span class="notis"> return &lt;button className="square">X&lt;/button>&lt;button className="square">X&lt;/button>;</span>
+}
+                            </code>
+</pre>
+                  </div>
+                  <div class="note"><span class="sas">Error:JSX expressions must have one parent element.javascript</span>
+                  <p>Here the code editor tells us that there is an error. So we try to fix it</p></div>
+              <br> <p>React components need to return a single JSX element and not multiple adjacent JSX elements like two buttons. To fix this you can use fragments (&lt;> and &lt;/>) to wrap multiple adjacent JSX elements like this:</p>
+                  <br>
+                                <div class="container-fixed source">
+<pre><code class="html sid"> 
+export default function Square() {
+  return (
+   <span class="notis"> &lt;>
+      &lt;button className="square">X&lt;/button>
+      &lt;button className="square">X&lt;/button>
+    &lt;/></span>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <iframe src="https://poste.new-poste.info/p/step-2.html" height=100 width=200></iframe>
+                  <h3>amazing ! It's easy now, copy and paste until you check out the nine squares</h3>
+                 <iframe src="https://poste.new-poste.info/p/step-4.html" height=100 width=400></iframe> 
+                  <p>Yah! All squares are on one line.
+Here comes the role of <span class="sas">CSS</span> by adding a sign <span class="sas">&lt;div></span> we will collect the matrix as it should and give each square a special number so that the picture becomes clear</p><br>
+                  <p>We'll handle it</p>
+                                                  <div class="container-fixed source">
+<pre><code class="html sid"> 
+export default function Square() {
+  return (
+   <span class="notis">
+   
+  &lt;>
+   &lt;di className="board-row">
+      &lt;button className="square">1&lt;/button>
+      &lt;button className="square">2&lt;/button>
+      &lt;button className="square">3&lt;/button>
+   &lt;div>
+   &lt;di className="board-row">
+      &lt;button className="square">4&lt;/button>
+      &lt;button className="square">5&lt;/button>
+      &lt;button className="square">6&lt;/button>
+   &lt;div>
+   &lt;di className="board-row>
+      &lt;button className="square">7&lt;/button>
+      &lt;button className="square">8&lt;/button>
+      &lt;button className="square">9&lt;/button>
+   &lt;div>
+  &lt;/>
+    
+    </span>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <iframe src="https://poste.new-poste.info/p/step-5.html" height=150 width=200></iframe> 
+                  <div class="note">N.B<br>It seems that it is a little tiring, but you have to get used to it. Do not copy the code from our page and paste it there. Practice writing it for your benefit.<br>
+Another thing in programming as a whole, practicing and writing codes is the solution for more learning. <br>Let's go back to our tutorial</div>
+                  <hr />
+              </div>
+         </div>
+         </article>
+       <!--Passing data through props-->
+       <article class="my-3" id="form6">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Passing data through props</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Passing data through props</h2>
+                  <p>At this stage, we will start writing code that changes the content of the boxes. For example, the box is empty when clicked, and it becomes <span class="sas">(X) or (Y)</span> as an option.<br>
+                    What makes it great is that <span class="sas">React</span> it has a solution without repetition. Continue the lesson</p>
+                  <br><p>In the code editor, cut this line of code <span class="sas">&lt;button className="square">1&lt;/button> </span> Focus on the example</p>
+               <br>
+                     <div class="container-fixed source">
+<pre><code class="html sid"> 
+<span class="notis">function Square() {
+  return &lt;button className="square">1&lt;/button>;
+   </span> 
+   export default function Square()
+  //...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Now we are going to build the <span class="notis">JSX </span>  syntax to update the panel components <span class="notis">Square</span></p>
+                  <br>
+                          <div class="container-fixed source">
+<pre><code class="html sid"> 
+export default function Board() {
+  return (
+   <span class="notis">
+   
+  &lt;>
+   &lt;di className="board-row">
+     &lt;Square />
+   &lt;div>
+   &lt;di className="board-row">
+     &lt;Square />
+   &lt;div>
+   &lt;di className="board-row>
+     &lt;Square />
+   &lt;div>
+  &lt;/>
+    
+    </span>
+  );
+} 
+  
+                            </code>
+</pre>
+                  </div>
+                  <div class="notis">N.B<br>
+                    <span class="sas">export default function Square() </span>===>>>> <span class="sas">export default function Board() </span><br>
+                    <span class="sas">&lt;button className="square">1&lt;/button> </span>===>>>> <span class="sas">&lt;Square /> </span><br><br>
+                    For more knowledge, glory be to you. We distinguish between a sign <span class="sas">HTML</span> and a sign <span class="sas">REACT</span> a sign <span class="sas">HTML</span> that is with a lowercase letter and a sign <span class="sas">REACT</span> that begins with capital letters. This is wonderful.
+                  </div>
+                    <iframe src="https://poste.new-poste.info/p/step-6.html" height=150 width=200></iframe>
+                  <br>
+                  <p>Notice with me that most of the squares inside it have become number "".
+                 <br>In order to make it perfect we will use a single property that passes the values in the boxes to put all the focus on it.<br>
+                    update <span class="sas">Square</span> in<span class="sas">Board</span></p>
+                  <br>
+                                     <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+<span class="notis">function Square({ value }) {</span>
+  return &lt;button className="square">1&lt;/button>;
+}
+                            </code>
+</pre>
+                  </div>
+                  
+                                     <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+function Square({ value }) {
+  <span class="notis">return &lt;button className="square">value&lt;/button>;</span>
+}
+                            </code>
+</pre>
+                  </div>
+                    <div class="notis">N.B<br>
+                    <span class="sas">function Square()</span>===>>>> <span class="sas">function Square({ value }) </span><br>
+                    <span class="sas">&lt;button className="square">1&lt;/button> </span>===>>>> <span class="sas">&lt;button className="square">value&lt;/button> </span><br><br>
+                   
+                  </div>
+                  <p>Its Not LOgical</p>
+                  <iframe src="https://poste.new-poste.info/p/step-7.html" height=150 width=200></iframe>
+                  <br><p>
+                  Well, everything has a solution here instead of displaying a variable value inside the square. We created a word<span class="sas">value </span> , and this has a solution in <span class="sas">javascript </span> where we will use curly brackets <span class="sas">{} </span> and square brackets  <span class="sas">[] </span>. Help us get out of trouble <span class="sas">JSX</span> to <span class="sas">javascript </span>
+                  </p>
+                  <br>
+                  
+                                     <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+function Square({ value }) {
+  <span class="notis">return &lt;button className="square">{value}&lt;/button>;</span>
+}
+                            </code>
+</pre>
+                  </div>
+                  <p>Now Is the good work:</p>
+                   <iframe src="https://poste.new-poste.info/p/step-8.html" height=150 width=200></iframe>
+                  <br>
+                  <p>Now we will add the value property to each square <span class="sas">&lt;Square /> </span>===>>>> <span class="sas">&lt;Square value="?" /></span>
+                  (? = 1,2,3,4,5,6,7,8,9)
+                  
+                  
+                  </p>
+                  <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        <span class="notis">
+        &lt;Square value="1" />
+        &lt;Square value="2" />
+        &lt;Square value="3" /></span>
+      &lt;/div>
+      &lt;div className="board-row">
+       <span class="notis"> 
+       &lt;Square value="4" />
+        &lt;Square value="5" />
+        &lt;Square value="6" /></span>
+      &lt;/div>
+      &lt;div className="board-row">
+       <span class="notis">
+       &lt;Square value="7" />
+        &lt;Square value="8" />
+        &lt;Square value="9" /></span>
+      &lt;/div>
+    &lt;/>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <p>Good</p>
+                  <iframe src="https://poste.new-poste.info/p/step-9.html" height=150 width=200></iframe>
+                  <h3>Now I'm going to show you the code we got</h3>
+                                  <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1mfjBVEyhCm2_317TIdAgl5t8SgHbEJE2"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid"> 
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+
+function Square({value}){
+  return &lt;button className="square">{value}&lt;/button>;
+}
+
+
+let App = function Board() {
+  
+  return (
+
+     &lt;>
+     &lt;div className="board-row">
+      &lt;Square value="1"/>
+      &lt;Square value="2"/>
+      &lt;Square value="3"/>
+      &lt;/div>
+       &lt;div className="board-row">
+     &lt;Square value="4"/>
+      &lt;Square value="5"/>
+      &lt;Square value="6"/>
+      &lt;/div>
+       &lt;div className="board-row">
+      &lt;Square value="7"/>
+      &lt;Square value="8"/>
+      &lt;Square value="9"/>
+      &lt;/div>
+    &lt;/>
+  )
+  
+  
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>
+                            </code>
+</pre>
+                  </div>
+                  <iframe src="https://poste.new-poste.info/p/step-9.html" height=150 width=200></iframe>
+                  
+                  <hr />
+              </div>
+         </div>
+         </article>
+             <!--interactive components-->
+       <article class="my-3" id="form7">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>interactive components</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>interactive components</h2><br /><br />
+                  <p>Well, let's fill in the   <span class="sas">square </span> component with a checkmark ( <span class="sas">X </span>) when you click it. <br>We'll use a function called <span class="sas">handleClick </span>inside the box.<br>
+                    
+                  Then, add <span class="sas">onClick</span> to the props of the button JSX element returned from the <span class="sas">square </span>:  
+
+                  </p>
+                  <br>
+                    <div class="container-fixed source">
+<pre><code class="javascript sid">
+function Square({ value }) {
+<span class="notis">
+function handleClick() {
+    console.log('clicked!');</span>
+  }
+
+  return (
+    &lt;button
+      className="square"
+     <span class="notis">
+     onClick={handleClick}
+    >
+      {value}
+    &lt;button>
+    </span>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>If you click on a square now, you should see a log saying "clicked!" in the Console tab at the bottom of the Browser . Clicking the square more than once will log "clicked!" again. Repeated console logs with the same message will not create more lines in the console. Instead, you will see an incrementing counter next to your first "clicked!" log.</p>
+                  <div class="note">N.B<br>If you are following this tutorial using your local development environment, you need to open your browser’s Console. For example, if you use the Chrome browser, you can view the Console with the keyboard shortcut Shift + Ctrl + J (on Windows/Linux) or Option + ⌘ + J (on macOS).</div>
+                  <br><p>As a next step, you want the Square component to “remember” that it got clicked, and fill it with an “X” mark. To “remember” things, components use state.<br>
+                  React provides a special function called <span class="sas">useState</span>
+                  that you can call from your component to let it “remember” things. Let’s store the current value of the <span class="sas">Square</span> in state, and change it when the <span class="sas">Square</span> is clicked.<br>
+                  
+                  Import <span class="sas">useState</span> at the top of the file. Remove the <span class="sas">value</span> prop from the <span class="sas">Square</span> component. Instead, add a new line at the start of the <span class="sas">Square</span> that calls <span class="sas">useState</span>. Have it return a state variable called <span class="sas">value</span>:
+                  
+                  
+                  </p>
+                 <br>
+                    <div class="container-fixed source">
+<pre><code class="javascript sid">
+<span class="notis">import { useState } from 'react';
+
+function Square() {
+  const [value, setValue] = useState(null);</span>
+
+  function handleClick() {
+    //...
+                            </code>
+</pre>
+                  </div>
+                  <br><p>value stores the <span class="sas">value</span> and <span class="sas">setValue</span> is a function that can be used to change the value.<br>
+                  The <span class="sas">null</span> passed to <span class="sas">useState</span> is used as the initial <span class="sas">value</span> for this state variable, so <span class="sas">value</span> here starts off equal to <span class="sas">null</span>.<br>
+
+Since the <span class="sas">Square</span> component no longer accepts props anymore, you’ll remove the <span class="sas">value</span> prop from all nine of the Square components created by the Board component:</p>
+                  
+                  <br>
+                    <div class="container-fixed source">
+<pre><code class="javascript sid">
+// ...
+export default function Board() {
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        <span class="notis">
+        &lt;Square />
+        &lt;Square />
+        &lt;Square /></span>
+      &lt;/div>
+      &lt;div className="board-row"><span class="notis">
+        &lt;Square />
+        &lt;Square />
+        &lt;Square /></span>
+      &lt;/div>
+      &lt;div className="board-row"><span class="notis">
+        &lt;Square />
+        &lt;Square />
+        &lt;Square /></span>
+      &lt;/div>
+    &lt;/>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Now you’ll change <span class="sas">Square</span> to display an “X” when clicked. Replace the <span class="sas">console.log("clicked!");</span> event handler with <span class="sas">setValue('X');</span>. Now your <span class="sas">Square</span> component looks like this:</p>
+                  <br>
+                    <div class="container-fixed source">
+<pre><code class="javascript sid">
+function Square() {
+  const [value, setValue] = useState(null);
+
+  function handleClick() {<span class="notis">
+    setValue('X');</span>
+  }
+
+  return (
+    &lt;button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    &lt;/button>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>By calling this <span class="sas">set</span> function from an <span class="sas">onClick</span> handler, you’re telling React to re-render that <span class="sas">Square</span> whenever its <span class="sas">&lt;button></span> is clicked. After the update, the <span class="sas">Square’s</span> <span class="sas">value</span> will be <span class="sas">'X'</span>, so you’ll see the “X” on the game board. Click on any Square, and “X” should show up:</p>
+                  <br>
+                   <iframe src="https://poste.new-poste.info/p/step-10.html" height=150 width=200></iframe>
+                  <br>
+                  <p>Each Square has its own state: the <span class="sas">value</span> stored in each Square is completely independent of the others. When you call a <span class="sas">set</span> function in a component, React automatically updates the child components inside too.<br>
+
+After you’ve made the above changes, your code will look like this:</p>
+                  <br>
+                    <div class="container-fixed source">
+<pre><code class="html sid"> 
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { useState }  from 'react';
+
+
+function Square(){
+  const [value, setValue] = useState(null);
+  function handleClick() {
+    setValue('X');
+  }
+
+
+
+
+  return &lt;button className="square"  onClick={handleClick}>
+    
+    {value}
+    
+    &lt;/button>;
+}
+
+
+let App = function Board() {
+  
+  return (
+
+     &lt;>
+     &lt;div className="board-row">
+      &lt;Square />
+      &lt;Square />
+      &lt;Square />
+      &lt;/div>
+       &lt;div className="board-row">
+     &lt;Square />
+      &lt;Square />
+      &lt;Square />
+      &lt;/div>
+       &lt;div className="board-row">
+      &lt;Square />
+      &lt;Square />
+      &lt;Square />
+      &lt;/div>
+    &lt;/>
+  )
+  
+  
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                   <iframe src="https://poste.new-poste.info/p/step-10.html" height=150 width=200></iframe>
+                  <hr />
+              </div>
+         </div>
+         </article>
+      
+  <!------------------------------------------------------------------------------------------>       <!--Well let's continue our game-->
+       <article class="my-3" id="form8">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Well let's continue our game</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Well let's continue our game</h2><br />
+                 
+                  <h5>Now that we have all the foundations of our great game complete, in order to make the game perfect for the user, we need a way to switch (X) & (O) and to determine the winner.</h5>
+          
+                  <hr />
+              </div>
+         </div>
+         </article>
+      
+        <!--Let's get it right-->
+       <article class="my-3" id="form9">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Let's get it right</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Let's get it right</h2><br />
+                 
+                  <p>The current state of the game does not allow us to know the winner, so we will need to identify the components of each <span class="sas">Square</span> separately, so that each component of the <span class="sas">Square</span> retains a state of the game. Let's solve the puzzle.</p>
+                  <br>
+                  <p>Now we will cancel storing the <span class="sas">State</span> in each <span class="sas">Square</span> and give permission to the original <span class="sas">Board</span> . This last one will send directions to the <span class="sas">Square</span> </p>
+                  <br>
+                  <p>To make the components communicate with each other, we gave the authority to the original <span class="sas">Board</span> to pass the <span class="sas">State</span>, this will make the synchronization logical between the parties</p>
+          <br>
+                                      <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+// ...
+export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  return (
+    // ...
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p><span class="sas">Array(9).fill(null)</span>  creates an array with nine elements and sets each of them to <span class="sas">null</span>. The <span class="sas">useState()</span> call around it declares a <span class="sas">squares</span> state variable that’s initially set to that array. Each entry in the array corresponds to the value of a square. When you fill the board in later, the <span class="sas">squares</span> array will look like this:</p>
+                  <br>
+                                                     <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+['O', null, 'X', 'X', 'X', 'O', 'O', null, null]
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <h4>Now your <span class="sas">Board</span> component needs to pass the value prop down to each <span class="sas">Squar</span> that it renders:</h4>
+                                                        <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        &lt;Square value={squares[0]} />
+        &lt;Square value={squares[1]} />
+        &lt;Square value={squares[2]} />
+      &lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[3]} />
+        &lt;Square value={squares[4]} />
+        &lt;Square value={squares[5]} />
+      &lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[6]} />
+        &lt;Square value={squares[7]} />
+        &lt;Square value={squares[8]} />
+      &lt;/div>
+    &lt;/>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Next, you’ll edit the <span class="sas">Squar</span> component to receive the <span class="sas">value</span> prop from the Board component. This will require removing the Square component’s own stateful tracking of <span class="sas">value</span> and the button’s <span class="sas">onClick</span> prop:</p>
+                  <br>
+                                                                    <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+function Square({value}) {
+  return &lt;button className="square">{value}&lt;/button>;
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <h5>Now the board is empty.</h5>
+                   <iframe src="https://poste.new-poste.info/p/step-11.html" height=150 width=200></iframe>
+                  <br>
+                                                                           <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1ZaTA4CEkmDUurRxPlcaWvdEoSCCUjaui"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="javascript sid"> 
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { useState }  from 'react';
+
+
+function Square(){
+  const [value, setValue] = useState(null);
+  function handleClick() {
+    setValue('X');
+  }
+
+
+
+
+  return &lt;button className="square">
+    
+    {value}
+    
+    &lt;/button>;
+}
+
+
+let App = function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  return (
+
+     &lt;>
+     &lt;div className="board-row">
+      &lt;Square value={squares[0]}/>
+      &lt;Square value={squares[1]}/>
+      &lt;Square value={squares[2]}/>
+      &lt;/div>
+       &lt;div className="board-row">
+     &lt;Square value={squares[3]}/>
+      &lt;Square value={squares[4]}/>
+      &lt;Square value={squares[5]}/>
+      &lt;/div>
+       &lt;div className="board-row">
+      &lt;Square value={squares[6]}/>
+      &lt;Square value={squares[7]}/>
+      &lt;Square value={squares[8]}/>
+      &lt;/div>
+    &lt;/>
+  )
+  
+  
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>                          </code>
+</pre>
+                  </div>
+                  <br>
+                  
+                   <iframe src="https://poste.new-poste.info/p/step-11.html" height=150 width=200></iframe>
+                  <br>
+                  <p>Each Square will now receive a <span class="sas">value</span> prop that will either be <span class="sas">'X'</span>, <span class="sas">'O'</span>, or <span class="sas">null</span> for empty squares.
+<br>
+                    Next, you need to change what happens when a <span class="sas">Square</span> is clicked.<br> The <span class="sas">Board</span> component now maintains which squares are filled. You’ll need to create a way for the <span class="sas">Square</span> to update the <span class="sas">Board’s</span> state.<br> Since state is private to a component that defines it, you cannot update the <span class="sas">Board’s</span> state directly from Square.
+<br>
+                    Instead, you’ll pass down a function from the <span class="sas">Board</span> component to the <span class="sas">Square</span> component, and you’ll have <span class="sas">Square</span> call that function when a square is clicked. <br>You’ll start with the function that the Square component will call when it is clicked.<br> You’ll call that function <span class="sas">onSquareClick</span>:
+</p>
+                  <br>
+                                                                           <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+function Square({value}) {
+  return 
+  <span class="notis">&lt;button className="square" onClick={onSquareClick}></span>
+  {value}
+  &lt;/button>;
+}
+                            </code>
+</pre>
+                  </div>
+                  <br><p>Next, you’ll add the <span class="sas">onSquareClick</span> function to the <span class="sas">Square</span> component’s props:</p>
+                  <br>
+                                                                                             <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+<span class="notis">function Square({value, onSquareClick }) {</span>
+  return 
+  &lt;button className="square" onClick={onSquareClick}>
+  {value}
+  &lt;/button>;
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Now you’ll connect the <span class="sas">onSquareClick</span> prop to a function in the <span class="sas">Board</span> component that you’ll name <span class="sas">handleClick</span>.<br> To connect <span class="sas">onSquareClick</span> to <span class="sas">handleClick</span> you’ll pass a function to the <span class="sas">onSquareClick</span> prop of the first <span class="sas">Square</span> component:</p>
+                  <br>
+                                                                                                               <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        <span class="notis">&lt;Square value={squares[0]} onSquareClick={handleClick}</span> />
+        //...
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Lastly, you will define the <span class="sas">handleClick</span> function inside the Board component to update the <span class="sas">squares</span> array holding your board’s state:</p>
+                  <br>
+                               <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  
+   function handleClick() {
+    const nextSquares = squares.slice();
+    nextSquares[0] = "X";
+    setSquares(nextSquares);
+  }
+  
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        <span class="notis">&lt;Square value={squares[0]} onSquareClick={handleClick}</span> />
+        //...
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>The<span class="sas"> handleClick</span> function creates a copy of the <span class="sas">squares</span> array (<span class="sas">nextSquares</span>) with the JavaScript <span class="sas">slice()</span> Array method.<br> Then, <span class="sas">handleClick</span> updates the <span class="sas">nextSquares</span> array to add <span class="sas">X</span> to the first ([0] index) square.<br>
+
+                    Calling the <span class="sas">setSquares</span> function lets React know the state of the component has changed.<br> This will trigger a re-render of the components that use the <span class="sas">squares</span> state (<span class="sas">Board</span>) as well as its child components (the <span class="sas">Square</span> components that make up the board).</p>
+                  <br>
+                  <div class="note">N.B<br>javaScript supports <span class="notis">closures</span> which means an inner function (e.g. <span class="sas">handleClick</span>) has access to variables and functions defined in a outer function (e.g. <span class="sas">Board</span>). The <span class="sas">handleClick</span> function can read the <span class="sas">squares</span> state and call the <span class="sas">setSquares</span> method because they are both defined inside of the <span class="sas">Board</span> function.</div>
+                  <br>
+                  <p>You can update the <span class="sas">handleClick</span> function to take an argument <span class="sas">i</span> and update the given index instead of the hardcoded index <span class="sas">0</span>. <br>This means that you can now <span class="sas">update</span> any <span class="sas">square</span> on the <span class="sas">board</span> instead of just the upper left square. Here’s an example of how you can do this:</p>
+                  <br>
+                                         <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  
+   function handleClick(i) {
+    const nextSquares = squares.slice();
+    nextSquares[i] = "X";
+    setSquares(nextSquares);
+  }
+  
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        <span class="notis">&lt;Square value={squares[0]} onSquareClick={handleClick}</span> />
+        //...
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Yes, you are correct. Setting the <span class="sas">onSquareClick</span> prop of the square to be <span class="sas">handleClick(0)</span> directly in the JSX like this won’t work because it will call the <span class="sas">handleClick</span> function immediately instead of passing it as a callback to be called when the square is clicked.<br>
+
+                    Instead, you can pass an anonymous function as the <span class="sas">onSquareClick</span> prop that calls <span class="sas">handleClick</span> with the appropriate index when the square is clicked. Here’s an example of how you can do this:</p>
+                  <br>
+                                                     <div class="container-fixed source">
+<pre><code class="html sid"> 
+&lt;Square value={squares[0]} onSquareClick={handleClick(0)} />
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>In this example, we’re passing an anonymous function <span class="sas">() => this.handleClick(i)</span> as the <span class="sas">onSquareClick</span> prop. This function will be called when the square is clicked, and it will call <span class="sas">handleClick</span> with the appropriate index <span class="sas">i</span>.</p>
+                  <br>
+                  <h5>What were the reasons that this problem did not arise earlier?</h5>
+                  <p>Previously, when you passed <span class="sas">onSquareClick={handleClick}</span>, you were passing the <span class="sas">handleClick</span> function as a prop without calling it.<br> However, now you are calling the function immediately by adding parentheses, as in <span class="sas">handleClick(0)</span>, which causes it to run too early.<br> The desired behavior is for handleClick to only be called when the user clicks on the square.</p>
+                  <br>
+                  <p>To fix the issue, You could fix this by creating a function like <span class="sas">handleFirstSquareClick</span> that calls <span class="sas">handleClick(0)</span>, a function like <span class="sas">handleSecondSquareClick</span> that calls <span class="sas">handleClick(1)</span>, and so on.<br> You would pass (rather than call) these functions down as props like <span class="sas">onSquareClick={handleFirstSquareClick}</span>. <br>This would solve the infinite loop.</p>
+                  
+                  <h5>Defining nine separate functions and assigning a unique name to each one can be quite tedious. Instead, let’s try the following approach:</h5>
+                  <br>
+                                                         <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  // ...
+  return (
+   &lt;>
+      &lt;div className="board-row">
+        &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+        // ...
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Take note of the new <span class="sas">() =></span> syntax.<br> This is an arrow function, which provides a more concise way to define functions. When the square is clicked, the code following the <span class="sas">=></span> arrow will be executed, resulting in a call to <span class="sas">handleClick(0)</span>.</p>
+                  <p>Next, you’ll need to update the remaining eight squares to call <span class="sas">handleClick</span> from the arrow functions you pass as props. Ensure that the argument passed to each call of <span class="sas">handleClick</span> corresponds to the index of the appropriate square.</p>
+                  <br>
+                                                                   <div class="container-fixed source">
+<pre><code class="javascript sid"> 
+export default function Board() {
+  // ...
+  return (
+    &lt;>
+      &lt;div className="board-row">
+        &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+        &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+        &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+      &lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+        &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+        &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+      &lt;/div>
+      &lt;div className="board-row">
+        &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+        &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+        &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+      &lt;/div>
+    &lt;/>
+  );
+};
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>By clicking on any square on the board, you can now once again add X’s to them.</p>
+                  <iframe src="https://poste.new-poste.info/p/step-12.html" height=150 width=200></iframe>
+                  <br>
+                  <p>This time, however, the Board component is responsible for managing all aspects of the state.</p>
+                  <br>
+                  <p>Your code should resemble the following example.</p>
+                  <br>
+                                                                                     <div class="container-fixed source">
+<pre><code class="html sid"> 
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { useState }  from 'react';
+
+
+function Square({value, onSquareClick} ){
+  
+  return &lt;button className="square" onClick={onSquareClick}>
+    
+    {value}
+    
+    &lt;/button>;
+}
+
+
+let App = function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+
+function handleClick(i) {
+    const nextSquares = squares.slice();
+    nextSquares[i] = "X";
+    setSquares(nextSquares);
+}
+
+  return (
+
+     &lt;>
+     &lt;div className="board-row">
+      &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
+      &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
+      &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)}/>
+      &lt;/div>
+       &lt;div className="board-row">
+     &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)}/>
+      &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)}/>
+      &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)}/>
+      &lt;/div>
+       &lt;div className="board-row">
+      &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)}/>
+      &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
+      &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
+      &lt;/div>
+    &lt;/>
+  )
+  
+  
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>
+                            </code>
+</pre>
+                  </div>
+                  <iframe src="https://poste.new-poste.info/p/step-12.html" height=150 width=200></iframe>
+                  <br>
+                  <p>he <span class="sas">Board</span> component, which is the parent of the <span class="sas">Square</span> components, passes props to its children so that they can be displayed correctly.
+                    <br> When a <span class="sas">Square</span> is clicked, it asks the <span class="sas">Board</span> to <span class="sas">update</span> the state of the <span class="sas">board</span>.
+                    <br> The <span class="sas">Board’s</span> state changes and both the <span class="sas">Board</span> and every child <span class="sas">Square</span> re-renders automatically.
+                    <br> The <span class="sas">state</span> of all <span class="sas">squares</span> is kept in the <span class="sas">Board</span> component, allowing it to determine the winner in the future.
+                    <br>When a user clicks on the top left <span class="sas">square</span> to add an <span class="sas">X</span>, the <span class="sas">onClick</span> prop of the button in the <span class="sas">Square</span> runs a function that was received from the <span class="sas">Board</span> as its <span class="sas">onSquareClick</span> prop.
+                    <br> The <span class="sas">Board</span> defined this function directly in its JSX and it calls <span class="sas">handleClick</span> with an argument of 0.
+                    <br> <span class="sas">handleClick</span> updates the first element of the <span class="sas">squares</span> array from null to <span class="sas">X</span> using this argument.
+                    <br> The <span class="sas">squares</span> state of the <span class="sas">Board</span> is <span class="sas">updated</span>, causing both the <span class="sas">Board</span> and all of its children to re-render.
+                    <br> This changes the <span class="sas">value</span> prop of the <span class="sas">Square</span> with index <span class="sas">0</span> from <span class="sas">null</span> to <span class="sas">X</span>, and as a result, the user sees that the upper left <span class="sas">square</span> has changed from empty to having an <span class="sas">X</span> after clicking it</p>
+                  <br>
+                  <div class="notis">N.B<br>In React, the <span class="sas">onClick</span> attribute of the <span class="sas">DOM &lt;button></span> element has a special meaning because it is a built-in component.
+                    <br>However, for custom components like <span class="sas">Square</span>, you have the freedom to choose any name for the <span class="sas">onSquareClick</span> prop or the <span class="sas">handleClick</span> function of the <span class="sas">Board</span>.
+                    <br>The code would still work the same regardless of the naming.
+                    <br>It is conventional in <span class="sas">React</span> to use <span class="sas">onSomething</span> names for props representing events and <span class="sas">handleSomething</span> for function definitions handling those events.</div>
+                  <br>
+                                                                                 
+                  
+                  <hr />
+              </div>
+         </div>
+         </article>
+      
+        <!--The significance of immutability.-->
+       <article class="my-3" id="form10">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>The significance of immutability.</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>The significance of immutability.</h2><br />
+                 
+                  <p>In the <span class="sas">handleClick</span> function, you create a copy of the <span class="sas">squares</span> array using <span class="sas">.
+                    <br>slice()</span> instead of modifying the existing array. 
+                    <br>To understand why this is done, we need to learn about immutability and its importance. 
+                    <br>There are two ways to change data: mutating it by directly changing its <span class="sas">values</span> or replacing it with a new copy that has the desired changes.
+                    <br>If you were to mutate the <span class="sas">squares</span> array, it would look like this:</p><br>
+                       <div class="container-fixed source">
+<pre><code class="javascript sid">
+const squares = [null, null, null, null, null, null, null, null, null];
+squares[0] = 'X';
+// Now `squares` is ["X", null, null, null, null, null, null, null, null];
+                            </code>
+</pre>
+                  </div>
+          <br>
+                  <p>This is what it would look like if you changed the data without mutating the squares array.</p>
+                  <br>
+                               <div class="container-fixed source">
+<pre><code class="javascript sid">
+const squares = [null, null, null, null, null, null, null, null, null];
+const nextSquares = ['X', null, null, null, null, null, null, null, null];
+// Now `squares` is unchanged, but `nextSquares` first element is 'X' rather than `null`
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>By not directly changing the underlying data, you achieve the same result while gaining several benefits.
+                    <br>Immutability makes it easier to implement complex features, such as the “time travel” feature that allows you to review the game’s history and “jump back” to past moves.
+                    <br>This is not specific to games, as the ability to undo and redo certain actions is a common requirement for apps.
+                    <br>Avoiding direct data mutation allows you to keep previous versions of the data intact and reuse them later.
+                    <br>Immutability also has another benefit: it makes it cheap for components to compare whether their data has changed or not.
+                    <br>This can be useful for performance reasons, as you might want to skip re-rendering parts of the tree that were not affected by the change.
+                    <br>By default, all child components re-render automatically when the state of a parent component changes, even if they were not affected by the change.
+                    <br>You can learn more about how React chooses when to re-render a component in <a href="https://react.dev/reference/react/memo">the memo API reference</a>.</p>
+                  <hr />
+              </div>
+         </div>
+         </article>
+       <!--Alternating turns-->
+       <article class="my-3" id="form11">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Alternating turns</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Alternating turns</h2><br />
+                 
+                  <p>It’s time to fix a major issue in our tic-tac-toe game: the inability to mark <span class="sas">“O"</span>s on the board. We’ll set the first move to be <span class="sas">“X”</span> by default and keep track of this by adding another piece of state to the Board component.</p>
+                  <br>
+                          <div class="container-fixed source">
+<pre><code class="javascript sid">
+function Board() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [squares, setSquares] = useState(Array(9).fill(null));
+
+  // ...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Each time a player makes a move, the value of <span class="sas">xIsNext</span>, which is a boolean, will be flipped to determine which player goes next and the game’s state will be saved. <br>The <span class="sas">handleClick</span> function of the Board will be updated to flip the value of <span class="sas">xIsNext</span>.</p>
+                  <br>
+                  
+                          <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Board() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [squares, setSquares] = useState(Array(9).fill(null));
+
+  function handleClick(i) {
+    const nextSquares = squares.slice();
+   <span class="notis"> if (xIsNext) {
+      nextSquares[i] = "X";
+    } else {
+      nextSquares[i] = "O";</span>
+    }
+    setSquares(nextSquares);
+    <span class="notis">setXIsNext(!xIsNext);</span>
+  }
+
+  return (
+    //...
+  );
+}
+                            </code>
+</pre>
+                  </div>
+                  
+                  <br>
+                 <p> As you click on different squares, they will now alternate between <span class="sas">X</span> and <span class="sas">O</span> as expected.</p>
+                  <br><p>However, there is an issue: try clicking on the same square multiple times.</p>
+                 <br>
+                   <iframe src="https://poste.new-poste.info/p/step-13.html" height=150 width=200></iframe>
+                  <br>
+                  <p>The <span class="sas">O</span> overwrites the <span class="sas">X</span>! Although this could add an interesting twist to the game, we will stick to the original rules for now.</p>
+                  <br>
+                  <p>Here’s a rephrased version of the sentence with a different meaning: “When marking a square with an <span class="sas">X</span> or an <span class="sas">O</span>, you should first check if the <span class="sas">square</span> already has a value. <br>If it does, you can return early in the <span class="sas">handleClick</span> function before updating the <span class="sas">board</span> state.<br> This will prevent the <span class="sas">square</span> from being overwritten by another value.</p>
+                  <br>
+                                    <div class="container-fixed source">
+<pre><code class="javascript sid">
+function handleClick(i) {
+  if (squares[i]) {
+    return;
+  }
+  const nextSquares = squares.slice();
+  //...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br><p>You can now only add <span class="sas">X’s</span> or <span class="sas">O’s</span> to squares that are empty! At this point, your code should look like this:</p>
+                  <br>
+                                                 <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1Z00hW3gkv-5gIxgulLcikRCcCzyWChUX"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+  &lt;div id="root">&lt;/div>
+&lt;/body>
+&lt;!-- This setup is not suitable for production. -->
+&lt;!-- Only use it in development! -->
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+&lt;script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js">&lt;/script>
+&lt;script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+&lt;/script>
+&lt;script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { useState }  from 'react';
+
+
+function Square({value, onSquareClick} ){
+  
+  return &lt;button className="square" onClick={onSquareClick}>
+    
+    {value}
+    
+    &lt;/button>;
+}
+
+
+let App = function Board() {
+    const [xIsNext, setXIsNext] = useState(true);
+  const [squares, setSquares] = useState(Array(9).fill(null));
+
+function handleClick(i) {
+    const nextSquares = squares.slice();
+    if (xIsNext){
+    nextSquares[i] = "X";
+} else {
+    nextSquares[i] = "O";
+}
+
+
+    setSquares(nextSquares);
+    setXIsNext(!xIsNext);
+}
+
+  return (
+
+     &lt;>
+     &lt;div className="board-row">
+      &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
+      &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
+      &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)}/>
+      &lt;/div>
+       &lt;div className="board-row">
+     &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)}/>
+      &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)}/>
+      &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)}/>
+      &lt;/div>
+       &lt;div className="board-row">
+      &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)}/>
+      &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
+      &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
+      &lt;/div>
+    &lt;/>
+  )
+  
+  
+}
+
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  &lt;StrictMode>
+    &lt;App />
+  &lt;/StrictMode>
+);
+&lt;/script>
+&lt;style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+&lt;/style>
+&lt;/html>
+                            </code>
+</pre>
+                  </div>
+                   <iframe src="https://poste.new-poste.info/p/step-13.html" height=150 width=200></iframe>
+                  <hr />
+              </div>
+         </div>
+         </article>
+       
+       <!--Announcing the winner.-->
+       <article class="my-3" id="form12">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>Announcing the winner.</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Announcing the winner.</h2><br /><br />
+                  <p>Now that players can alternate turns, you’ll want to display when the game has been won and no more turns can be made. <br>
+                    To do this, you’ll add a helper function called <span class="sas">calculateWinner</span> that takes an array of 9 squares as an input, checks for a winner, and returns <span class="sas">‘X’</span>, <span class="sas">‘O’</span>, or null accordingly. Don’t worry too much about the specifics of the <span class="sas">calculateWinner</span> function; it’s not unique to React.</p>
+                  <br>
+                                              <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=12t1UJHMthXo-la9Tr8np-J1V77rRWVML"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="javascript sid">
+export default function Board() {
+  //...
+}
+
+function calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+  for (let i = 0; i &lt; lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <div class="notis">N.B <br>The placement of the <span class="sas">calculateWinner</span> function, whether before or after the <span class="sas">Board</span>, is not important.<br> It can be placed at the end to avoid having to scroll past it every time you edit your components.</div>
+                  <br>
+                  <p>In the Board component’s <span class="sas">handleClick</span> function, you’ll call the <span class="sas">calculateWinner(squares)</span> function to check if a player has won. This check can be performed at the same time as checking if a user has clicked on a square that already has an <span class="sas">X</span> or an <span class="sas">O</span>. In both cases, we want to return early.</p>
+                  <br>
+                                                     <div class="container-fixed source">
+<pre><code class="javascript sid">
+function handleClick(i) {
+  if (squares[i] || calculateWinner(squares)) {
+    return;
+  }
+  const nextSquares = squares.slice();
+  //...
+}                        </code>
+</pre>
+                  </div>
+                  <br> <p><span class="sas">Winner: X”</span> or <span class="sas">“Winner: O”</span>. This can be achieved by incorporating a status section into the <span class="sas">Board </span>component. <br>The status will reveal the winner if the game has ended. <br>However, if the game is still in progress, the status will indicate which player is up next.
+
+ </p>
+                  <br>
+                                                                   <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Board() {
+  // ...
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner) {
+    status = "Winner: " + winner;
+  } else {
+    status = "Next player: " + (xIsNext ? "X" : "O");
+  }
+
+  return (
+    &lt;>
+      &lt;div className="status">{status}&lt;/div>
+      &lt;div className="board-row">
+        // ...
+  )
+} </code>
+</pre>
+                  </div>
+                  <br>
+                  <p class="notis">Great job! You’ve successfully created a tic-tac-toe game. In the process, you’ve also grasped the fundamentals of React. So, in reality, you’re the true victor here. Here’s how your code should appear:</p>
+                  <br>                                                            <div class="container-fixed source">
+<pre><code class="javascript sid">
+
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;body>
+    &lt;div id="root">&lt;/div>
+  &lt;/body>
+  &lt;!-- This setup is not suitable for production. -->
+  &lt;!-- Only use it in development! -->
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+  &lt;script
+    async
+    src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"
+  >&lt;/script>
+  &lt;script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  &lt;/script>
+  &lt;script type="text/babel" data-type="module">
+    import React, { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import { useState } from "react";
+
+    function Square({ value, onSquareClick }) {
+      return (
+        &lt;button className="square" onClick={onSquareClick}>
+          {value}
+        &lt;/button>
+      );
+    }
+
+    let App = function Board() {
+      const [xIsNext, setXIsNext] = useState(true);
+      const [squares, setSquares] = useState(Array(9).fill(null));
+
+      function handleClick(i) {
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+          nextSquares[i] = 'X';
+        } else {
+          nextSquares[i] = 'O';
+        }
+
+        setSquares(nextSquares);
+        setXIsNext(!xIsNext);
+      }
+
+      const winner = calculateWinner(squares);
+      let status;
+      if (winner) {
+        status = 'Winner: ' + winner;
+      } else {
+        status = 'Next player: ' + (xIsNext ? 'x' : 'O');
+      }
+      return (
+        &lt;>
+          &lt;div className="status">{status}&lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          &lt;/div>
+        &lt;/>
+      );
+    };
+    function calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      for (let i = 0; i &lt; lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      &lt;StrictMode>
+        &lt;App />
+      &lt;/StrictMode>
+    );
+  &lt;/script>
+  &lt;style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .square {
+      background: #fff;
+      border: 1px solid #999;
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 34px;
+    }
+
+    .board-row:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .status {
+      margin-bottom: 10px;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .game-info {
+      margin-left: 20px;
+    }
+  &lt;/style>
+&lt;/html>
+
+
+</code>
+</pre>
+                  </div>
+                  <br>
+                     <iframe src="https://poste.new-poste.info/p/step-14.html" height=150 width=200></iframe>
+                  <br>
+                  <hr />
+              </div>
+         </div>
+         </article>
+      
+       <!--Incorporating the feature of time travel.-->
+       <article class="my-3" id="form13">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Incorporating the feature of time travel.</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Incorporating the feature of time travel.</h2><br /><br />
+                  <p>For our final task, let’s enable the feature that allows us to “rewind” to previous moves in the game.</p>
+                  
+                  
+ <hr />
+                </div>
+            </div>
+        </article>
+      
+           <!--Keeping a record of past moves.-->
+       <article class="my-3" id="form14">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Keeping a record of past moves.</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Keeping a record of past moves.</h2><br /><br />
+                  <p>However, by using <span class="sas">slice()</span> after every move, you’ve created a fresh copy of the <span class="sas">squares</span> array and treated it as unchangeable. <br>This approach enables you to keep a record of every previous version of the squares array, and to navigate through the turns that have already taken place.<br>
+
+You’ll keep the past <span class="sas">squares</span>  arrays in another array named  <span class="sas">history</span>, which will be stored as a new state variable. <br>The <span class="sas">history</span> array encapsulates all board states, from the initial move to the final one, and it has a structure like this:</p>
+                  <br>
+                                  <div class="container-fixed source">
+<pre><code class="javascript sid">
+[
+  // Before first move
+  [null, null, null, null, null, null, null, null, null],
+  // After first move
+  [null, null, null, null, 'X', null, null, null, null],
+  // After second move
+  [null, null, null, null, 'X', null, null, null, 'O'],
+  // ...
+]
+                            </code>
+</pre>
+                  </div>
+                  
+ <hr />
+                </div>
+            </div>
+        </article>
+                 <!--Elevating state once more.-->
+       <article class="my-3" id="form15">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Elevating state once more.</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Elevating state once more.</h2><br /><br />
+                  <p>You’re now going to create a new top-level component named <span class="sas">Game</span> that will display a list of previous moves. <br>
+                    This is where you’ll place the <span class="sas">history</span> state that holds the entire <span class="sas">game history</span>.</p><p>
+
+                    By situating the history state within the <span class="sas">Game</span> component, you can eliminate the <span class="sas">squares</span> state from its child component, <span class="sas">Board</span>.<br>Similar to how you “elevated state” from the <span class="sas">Square</span> component to the <span class="sas">Board</span> component, you’ll now elevate it from the <span class="sas">Board</span> to the top-level <span class="sas">Game</span> component.</p>
+                    <p>This grants the <span class="sas">Game</span> component complete control over the <span class="sas">Board’s</span> data, enabling it to instruct the <span class="sas">Board</span> to render previous turns from the <span class="sas">history</span>.<br>
+
+                    Firstly, add a <span class="sas">Game</span> component with export default. Ensure it renders the <span class="sas">Board</span> component and some markup:</p>
+                  <br>
+                                  <div class="container-fixed source">
+<pre><code class="javascript sid">
+function Board() {
+  // ...
+}
+
+<span class="notis">export default function Game() {
+  return (
+    &lt;div className="game">
+      &lt;div className="game-board">
+        &lt;Board />
+      &lt;/div>
+      &lt;div className="game-info">
+       &lt;ol>{/*TODO*/}&lt;/ol>
+      &lt;/div>
+    &lt;/div>
+  );
+}&lt;</span>
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>ake note that you’re eliminating the  <span class="sas">export default</span> keywords before the <span class="sas">function Board() {</span> declaration and appending them before the <span class="sas">function Game() {</span> declaration.<br>
+                    This instructs your <span class="sas">index.js</span> file to utilize the <span class="sas">Game</span> component as the top-level component, replacing your <span class="sas">Board</span> component.<br>
+                    The extra divs returned by the <span class="sas">Game</span> component are creating space for the game information you’ll append to the <span class="sas">board</span> later.<br>
+
+Incorporate some state into the <span class="sas">Game</span> component to monitor which player is next and the history of moves:</p>
+                  <br>
+                                            <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+
+<span class="notis">
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  // ...</span>
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Observe that  <span class="sas">[Array(9).fill(null)]</span> is an array containing a single item, which is itself an array of 9 <span class="sas">nulls</span>.
+
+To display the squares for the current move, you’ll need to access the most recent squares array from the <span class="sas">history</span>.<br> There’s no need for <span class="sas">useState</span> here—you already possess sufficient information to compute it during rendering:</p>
+               <br>   
+                                               <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+  // ..
+                            </code>
+</pre>
+                  </div>
+                  <br><p>
+                  Next, formulate a function named <span class="sas">handlePlay</span> within the <span class="sas">Game</span> component. This function will be invoked by the <span class="sas">Board</span> component to update the game’s status. Pass <span class="sas">xIsNext</span>, <span class="sas">currentSquares</span>, and <span class="sas">handlePlay</span> as properties to the <span class="sas">Board</span> component:
+                  </p>
+                  <br>
+                                                    <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1Z00hW3gkv-5gIxgulLcikRCcCzyWChUX"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="javascript sid">
+export default function Game() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+
+  function handlePlay(nextSquares) {
+    // TODO
+  }
+
+  return (
+    &lt;div className="game">
+      &lt;div className="game-board">
+        &lt;Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        //...
+  )
+}&lt;.
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>Let’s transform the <span class="sas">Board</span> component to be entirely controlled by the props it receives. Modify the <span class="sas">Board</span> component to accept three props: <span class="sas">xIsNex</span>t, <span class="sas">squares</span>, and a new <span class="sas">onPlay</span> function. The <span class="sas">Board</span> can call this onPlay function with the updated squares array when a player makes a move. Then, eliminate the first two lines of the <span class="sas">Board</span> function that call <span class="sas">useState</span>:</p><br>
+                                                                  <div class="container-fixed source">
+<pre><code class="javascript sid">
+<span class="notis">function Board({ xIsNext, squares, onPlay }) {</span>
+  function handleClick(i) {
+    //...
+  }
+  // ...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br><p>Now, in the <span class="sas">Board</span> component’s <span class="sas">handleClick</span> function, replace the calls to <span class="sas">setSquares</span> and <span class="sas">setXIsNex</span>t with a single call to your new <span class="sas">onPlay</span> function. This will allow the <span class="sas">Game</span> component to update the <span class="sas">Board</span> when a square is clicked by the user.</p>
+                  <br>
+                                                                                 <div class="container-fixed source">
+<pre><code class="javascript sid">
+function Board({ xIsNext, squares, onPlay }) {
+  function handleClick(i) {
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    const nextSquares = squares.slice();
+    if (xIsNext) {
+      nextSquares[i] = "X";
+    } else {
+      nextSquares[i] = "O";
+    }
+    <span class="notis">onPlay(nextSquares);</span>
+  }
+  //...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>
+                  The <span class="sas">Board</span> component is now entirely governed by the props it receives from the <span class="sas">Game</span> component. To get the <span class="sas">game</span> functioning again, you need to implement the <span class="sas">handlePlay</span> function in the <span class="sas">Game</span> component.<br>
+
+What actions should <span class="sas">handlePlay</span> perform when invoked? Keep in mind that the <span class="sas">Board</span> used to call <span class="sas">setSquares</span> with an updated array; now it passes the updated <span class="sas">squares</span> array to <span class="sas">onPlay</span>.<br>
+
+The <span class="sas">handlePlay</span> function needs to update the <span class="sas">Game’s</span> state to trigger a re-render. 
+                    
+                    <br>However, you no longer have a <span class="sas">setSquares</span> function to call—you’re now using the <span class="sas">history</span> state variable to store this information. You’ll need to update history by adding the updated squares array as a new history entry. 
+                    
+                    <br>Additionally, you’ll want to toggle <span class="sas">xIsNext</span>, just as the Board used to do.
+                  </p><br>
+                                                            <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  //...
+  function handlePlay(nextSquares) {
+  <span class="notis">  setHistory([...history, nextSquares]);
+    setXIsNext(!xIsNext);</span>
+  }
+  //...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br><p>
+                  Here, <span class="sas">[…history, nextSquares]</span> constructs a new array that includes all the elements in <span class="sas">history</span>, followed by <span class="sas">nextSquares</span>.<br> You can interpret the …<span class="sas">history spread syntax</span> as “list all the elements in history”.<br>
+
+For instance, if <span class="sas">history</span> is <span class="sas">[[null,null,null], [“X”,null,null]]</span> and <span class="sas">nextSquares</span> is <span class="sas">[“X”,null,“O”]</span>, then the new <span class="sas">[…history, nextSquares]</span> array will be <span class="sas">[[null,null,null], [“X”,null,null], [“X”,null,“O”]</span>].<br>
+
+At this stage, you’ve relocated the state to reside in the <span class="sas">Game</span> component, and the UI should be fully operational, just as it was prior to the refactor.<br> Here’s how your code should appear at this point:
+                  </p>
+                  <br>
+                                                                       <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1ef87MIM3P_QtzkWPuW0GO6dIL7d4ZJQO"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;body>
+    &lt;div id="root">&lt;/div>
+  &lt;/body>
+  &lt;!-- This setup is not suitable for production. -->
+  &lt;!-- Only use it in development! -->
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+  &lt;script
+    async
+    src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"
+  >&lt;/script>
+  &lt;script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  &lt;/script>
+  &lt;script type="text/babel" data-type="module">
+    import React, { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import { useState } from "react";
+
+    function Square({ value, onSquareClick }) {
+      return (
+        &lt;button className="square" onClick={onSquareClick}>
+          {value}
+        &lt;/button>
+      );
+    }
+
+    function Board({xIsNext, squares, onPlay}) {
+      function handleClick(i) {
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+          nextSquares[i] = "X";
+        } else {
+          nextSquares[i] = "O";
+        }
+        onPlay(nextSquares);
+      }
+
+      const winner = calculateWinner(squares);
+      let status;
+      if (winner) {
+        status = "Winner: " + winner;
+      } else {
+        status = "Next player: " + (xIsNext ? "x" : "O");
+      }
+      return (
+        &lt;>
+          &lt;div className="status">{status}&lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          &lt;/div>
+        &lt;/>
+      );
+    }
+
+    let App = function Game() {
+      const [xIsNext, setXIsNext] = useState(true);
+      const [history, setHistory] = useState([Array(9).fill(null)]);
+      const currentSquares = history[history.length - 1];
+
+      function handlePlay(nextSquares) {
+        setHistory([...history, nextSquares]);
+        setXIsNext(!xIsNext);
+      }
+      return (
+        &lt;div className="game">
+          &lt;div className="game-board">
+            &lt;Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
+          &lt;/div>
+          &lt;div className="game-info">
+            &lt;ol>{/*TODO*/}&lt;/ol>
+          &lt;/div>
+        &lt;/div>
+      );
+    };
+
+    function calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      for (let i = 0; i &lt; lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      &lt;StrictMode>
+        &lt;App />
+      &lt;/StrictMode>
+    );
+  &lt;/script>
+  &lt;style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .square {
+      background: #fff;
+      border: 1px solid #999;
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 34px;
+    }
+
+    .board-row:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .status {
+      margin-bottom: 10px;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .game-info {
+      margin-left: 20px;
+    }
+  &lt;/style>
+&lt;/html>
+                      </code>
+</pre>
+                  </div>
+                  <br>
+                   <iframe src="https://poste.new-poste.info/p/step-15.html" height=150 width=200></iframe>
+ <hr />
+                </div>
+            </div>
+        </article>
+      
+       <!--Displaying the previous moves.-->
+       <article class="my-3" id="form16">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Displaying the previous moves.</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Displaying the previous moves.</h2>
+                   
+      <p>Given that you’re keeping track of the tic-tac-toe game’s history, you can now present a list of previous moves to the player.
+
+React elements such as <span class="sas">&lt;button></span> are just standard JavaScript objects; they can be passed around within your application. To render multiple items in React, an array of React elements can be used.
+
+You already possess an array of <span class="sas">history</span> moves in the state, so the next step is to convert it into an array of React elements. In JavaScript, the array map method can be used to transform one array into another.</p>
+                  <br>
+                   <div class="container-fixed source">
+<pre><code class="javascript sid">
+[1, 2, 3].map((x) => x * 2) // [2, 4, 6]
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>You'll employ the <span class="sas"> map</span>
+                    function to convert your <span class="sas">story</span> of moves into React elements that represent buttons on the screen, and display a list of buttons that allow players to "jump" to previous moves. Let's iterate over the <span class="sas">story</span> in the Game component:</p>
+                  <br>
+                                   <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+
+  function handlePlay(nextSquares) {
+    setHistory([...history, nextSquares]);
+    setXIsNext(!xIsNext);
+  }
+
+  function jumpTo(nextMove) {
+    // TODO
+  }
+
+  const moves = history.map((squares, move) => {
+    let description;
+    if (move > 0) {
+      description = 'Go to move #' + move;
+    } else {
+      description = 'Go to game start';
+    }
+    return (
+      &lt;li>
+        &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+      &lt;/li>
+    );
+  });
+
+  return (
+    &lt;div className="game">
+      &lt;div className="game-board">
+        &lt;Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      &lt;/div>
+     &lt;div className="game-info">
+        &lt;ol>{moves}&lt;/ol>
+      &lt;/div>
+    &lt;/div>
+  );
+}
+                            </code>
+</pre>
+                  </div>
+         <br>
+                  <p>You can check out what your code should look like below. Please note that you might encounter an error in the developer tools console stating: <span class="sas">Warning: Each child in an array or iterator should have a unique “key” prop. Check the render method of Game</span>. This error will be addressed in the upcoming section.</p>
+                  
+
+                  <br>
+                    <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1OR-_PxbHBq4K8eYUtfMSx9RQLCpSYQzr"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;body>
+    &lt;div id="root">&lt;/div>
+  &lt;/body>
+  &lt;!-- This setup is not suitable for production. -->
+  &lt;!-- Only use it in development! -->
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+  &lt;script
+    async
+    src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"
+  >&lt;/script>
+  &lt;script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  &lt;/script>
+  &lt;script type="text/babel" data-type="module">
+    import React, { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import { useState } from "react";
+
+    function Square({ value, onSquareClick }) {
+      return (
+        &lt;button className="square" onClick={onSquareClick}>
+          {value}
+        &lt;/button>
+      );
+    }
+
+    function Board({ xIsNext, squares, onPlay }) {
+      function handleClick(i) {
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+          nextSquares[i] = "X";
+        } else {
+          nextSquares[i] = "O";
+        }
+        onPlay(nextSquares);
+      }
+
+      const winner = calculateWinner(squares);
+      let status;
+      if (winner) {
+        status = "Winner: " + winner;
+      } else {
+        status = "Next player: " + (xIsNext ? "x" : "O");
+      }
+      return (
+        &lt;>
+          &lt;div className="status">{status}&lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          &lt;/div>
+        &lt;/>
+      );
+    }
+
+    let App = function Game() {
+      const [xIsNext, setXIsNext] = useState(true);
+      const [history, setHistory] = useState([Array(9).fill(null)]);
+      const currentSquares = history[history.length - 1];
+
+      function handlePlay(nextSquares) {
+        setHistory([...history, nextSquares]);
+        setXIsNext(!xIsNext);
+      }
+      function jumpTo(nextMove) {
+        //TODO
+      }
+
+      const moves = history.map((squares, move) => {
+        let description;
+        if (move > 0) {
+          description = "Go to move #" + move;
+        } else {
+          description = "Go to game start";
+        }
+        return (
+          &lt;li>
+            &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+          &lt;/li>
+        );
+      });
+
+      return (
+        &lt;div className="game">
+          &lt;div className="game-board">
+            &lt;Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
+          &lt;/div>
+          &lt;div className="game-info">
+            &lt;ol>{moves}&lt;/ol>
+          &lt;/div>
+        &lt;/div>
+      );
+    };
+
+    function calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      for (let i = 0; i &lt; lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      &lt;StrictMode>
+        &lt;App />
+      &lt;/StrictMode>
+    );
+  &lt;/script>
+  &lt;style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .square {
+      background: #fff;
+      border: 1px solid #999;
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 34px;
+    }
+
+    .board-row:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .status {
+      margin-bottom: 10px;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .game-info {
+      margin-left: 20px;
+    }
+  &lt;/style>
+&lt;/html>
+                     </code>
+</pre>
+                  </div> <br/>
+                   <iframe src="https://poste.new-poste.info/p/step-16.html" height=150 width=200></iframe>
+                  <br>
+                  <p>As you traverse the <span class="sas">history</span> array within the function you've passed to<span class="sas"> map</span>, the <span class="sas">squares</span> argument iterates through each element of <span class="sas">history</span>, while the <span class="sas">move</span> argument goes through each array index: <span class="sas">0, 1, 2,</span> and so on. (In most scenarios, you'd require the actual array elements, but for rendering a list of moves, you'll only need the indexes.)
+
+For each move in the tic-tac-toe game's history, you generate a list item <span class="sas">&lt;li></span> that contains a button <span class="sas">&lt;button></span>. This button has an <span class="sas">onClick</span> handler that invokes a yet-to-be-implemented function called <span class="sas">jumpTo</span>.
+
+At this point, you should see a list of the game's moves and an error in the developer tools console. Let's delve into what this "key" error signifies.</p>
+                   <hr />
+                </div>
+            </div>
+        </article>
+       <!--Selecting a key.-->
+       <article class="my-3" id="form17">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Selecting a key.</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Selecting a key.</h2>
+                  
+                  <p>When you render a list, React keeps some details about each rendered list item. When you update a list, React has to figure out what has changed. You could have added, removed, rearranged, or updated the items in the list.<br>
+
+                    Consider transitioning from:</p>
+                  
+                                                 <div class="container-fixed source">
+<pre><code class="javascript sid">
+&lt;li>Alexa: 7 tasks left&lt;/li>
+&lt;li>Ben: 5 tasks left&lt;/li>
+                            </code>
+</pre>
+                  </div>
+                  
+                  <h6>to</h6>
+                                                   <div class="container-fixed source">
+<pre><code class="javascript sid">
+&lt;li>Ben: 9 tasks left&lt;/li>
+&lt;li>Claudia: 8 tasks left&lt;/li>
+&lt;li>Alexa: 5 tasks left&lt;/li>
+                            </code>
+</pre>
+                  </div>         
+                  <br><p>In addition to the updated counts, a person reading this would likely say that you switched the order of Alexa and Ben, and inserted Claudia between Alexa and Ben. However, React is a computer program and can’t understand your intentions, so you need to assign a key property to each list item to distinguish each list item from its siblings. If your data came from a database, the database IDs of Alexa, Ben, and Claudia could be used as keys.
+                  </p>
+                  <br>
+                                                            <div class="container-fixed source">
+<pre><code class="javascript sid">
+&lt;li key={user.id}>
+  {user.name}: {user.taskCount} tasks left
+&lt;/li>
+                            </code>
+</pre>
+                  </div>    
+                  <br>
+                  <p>
+              When a list is re-rendered, React uses each list item's <span class="sas">key</span> to search the previous list's items for a matching <span class="sas">key</span>. If a <span class="sas">key</span> exists in the current list that wasn't present before, React creates a component. If a <span class="sas">key</span> that existed in the previous list is missing from the current list, React destroys the previous component. If two <span class="sas">key</span>s match, the corresponding component is moved.<br>
+
+<span class="sas">key</span>s inform React about the identity of each component, allowing React to maintain state between re-renders. If a component's <span class="sas">key</span> changes, the component will be destroyed and re-created with a new state.<br>
+
+The <span class="sas">key</span> is a special and reserved property in React. When an element is created, React extracts the <span class="sas">key</span> property and stores the <span class="sas">key</span> directly on the returned element. Even though it may seem like the <span class="sas">key</span> is passed as props, React automatically uses the <span class="sas">key</span> to decide which components to update. A component cannot inquire about the <span class="sas">key</span> its parent specified.<br>
+
+It's highly recommended to assign proper <span class="sas">key</span>s whenever you build dynamic lists. If you don't have an appropriate <span class="sas">key</span>, you might need to consider restructuring your data so that you do.
+<br>
+If no <span class="sas">key</span> is specified, React will report an error and use the array index as a <span class="sas">key</span> by default. Using the array index as a <span class="sas">key</span> can cause problems when trying to re-order a list’s items or inserting/removing list items. Explicitly passing <span class="sas">key={i} </span>silences the error but has the same problems as array indices and is not recommended in most cases.
+<br>
+<span class="sas">key</span>s don't need to be globally unique; they only need to be unique among components and their siblings. 
+              
+                  </p>
+ <hr />
+                </div>
+            </div>
+        </article>
+   <!--Implementing time travel-->
+       <article class="my-3" id="form18">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Implementing time travel</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Implementing time travel</h2>
+                  <p>In the history of the tic-tac-toe game, each previous move is associated with a unique ID: the sequential number of the move. The moves will never be re-arranged, deleted, or inserted in the middle, so it’s perfectly safe to use the move index as a key.
+
+Within the <span class="sas">Game</span> function, you can add the key as <span class="sas">&lt;li key={move}></span>, and upon reloading the rendered game, the “key” error reported by React should no longer appear.</p>
+                  <br>
+                  
+                                                            <div class="container-fixed source">
+<pre><code class="javascript sid">
+const moves = history.map((squares, move) => {
+  //...
+  return (
+    &lt;li key={move}>
+      &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+    &lt;/li>
+  );
+});
+                            </code>
+</pre>
+                  </div> 
+                  
+                  <br>
+                                                                          <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1OR-_PxbHBq4K8eYUtfMSx9RQLCpSYQzr"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;body>
+    &lt;div id="root">&lt;/div>
+  &lt;/body>
+  &lt;!-- This setup is not suitable for production. -->
+  &lt;!-- Only use it in development! -->
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+  &lt;script
+    async
+    src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"
+  >&lt;/script>
+  &lt;script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  &lt;/script>
+  &lt;script type="text/babel" data-type="module">
+    import React, { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import { useState } from "react";
+
+    function Square({ value, onSquareClick }) {
+      return (
+        &lt;button className="square" onClick={onSquareClick}>
+          {value}
+        &lt;/button>
+      );
+    }
+
+    function Board({ xIsNext, squares, onPlay }) {
+      function handleClick(i) {
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+          nextSquares[i] = "X";
+        } else {
+          nextSquares[i] = "O";
+        }
+        onPlay(nextSquares);
+      }
+
+      const winner = calculateWinner(squares);
+      let status;
+      if (winner) {
+        status = "Winner: " + winner;
+      } else {
+        status = "Next player: " + (xIsNext ? "x" : "O");
+      }
+      return (
+        &lt;>
+          &lt;div className="status">{status}&lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          &lt;/div>
+        &lt;/>
+      );
+    }
+
+    let App = function Game() {
+      const [xIsNext, setXIsNext] = useState(true);
+      const [history, setHistory] = useState([Array(9).fill(null)]);
+      const currentSquares = history[history.length - 1];
+
+      function handlePlay(nextSquares) {
+        setHistory([...history, nextSquares]);
+        setXIsNext(!xIsNext);
+      }
+      function jumpTo(nextMove) {
+        //TODO
+      }
+
+      const moves = history.map((squares, move) => {
+        let description;
+        if (move > 0) {
+          description = "Go to move #" + move;
+        } else {
+          description = "Go to game start";
+        }
+        return (
+          &lt;li>
+            &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+          &lt;/li>
+        );
+      });
+
+      return (
+        &lt;div className="game">
+          &lt;div className="game-board">
+            &lt;Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
+          &lt;/div>
+          &lt;div className="game-info">
+            &lt;ol>{moves}&lt;/ol>
+          &lt;/div>
+        &lt;/div>
+      );
+    };
+
+    function calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      for (let i = 0; i &lt; lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      &lt;StrictMode>
+        &lt;App />
+      &lt;/StrictMode>
+    );
+  &lt;/script>
+  &lt;style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .square {
+      background: #fff;
+      border: 1px solid #999;
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 34px;
+    }
+
+    .board-row:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .status {
+      margin-bottom: 10px;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .game-info {
+      margin-left: 20px;
+    }
+  &lt;/style>
+&lt;/html>
+
+                            </code>
+</pre>
+                  </div> <br>
+                  <iframe src="https://poste.new-poste.info/p/step-16.html" height=200 width=500></iframe>
+                  <br>
+                  <p>Before you can put the <span class="sas">jumpTo</span> function into effect, you need to ensure that the <span class="sas">Game</span> component is keeping track of the step that the user is currently viewing. To achieve this, establish a new state variable named <span class="sas">currentMove</span>, with a default value of <span class="sas">0</span>.</p>
+                  
+         <br>
+                    <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+ <span class="notis">const [currentMove, setCurrentMove] = useState(0);</span>
+  const currentSquares = history[history.length - 1];
+  //...
+}
+                            </code>
+</pre>
+                  </div> 
+                  
+                  <br>
+                  <p>Next, modify the <span class="sas">jumpTo</span> function within the <span class="sas">Game</span> component to update the <span class="sas">currentMove</span>. Also, ensure that <span class="sas">xIsNext</span> is set to true if the number to which you’are changing <span class="sas">currentsMove</span> is even.
+                  </p>
+                <br>
+                           <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  // ...
+  function jumpTo(nextMove) {
+     <span class="notis">setCurrentMove(nextMove);
+    setXIsNext(nextMove % 2 === 0);</span>
+  }
+  //...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>You’re now going to make two modifications to the <span class="sas">Game’s handlePlay</span> function, which is invoked when a square is clicked.<br>
+1.
+If you “rewind” to a previous point in time and then make a new move from that position, you’d want to preserve the history only up to that point. Rather than appending <span class="sas">nextSquares</span> after all items (using the … spread syntax) in <span class="sas">history</span>, you’ll append it after all items in <span class="sas">history.slice(0, currentMove + 1)</span>. This ensures that only that portion of the old history is retained.<br>
+2.
+Each time a move is made, you need to update <span class="sas">currentMove</span> to point to the most recent entry in the history.
+                  </p>
+                  <br>
+                                <div class="container-fixed source">
+<pre><code class="javascript sid">
+function handlePlay(nextSquares) {
+  <span class="notis">const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+  setHistory(nextHistory);
+  setCurrentMove(nextHistory.length - 1);</span>
+  setXIsNext(!xIsNext);
+}
+                            </code>
+</pre>
+                  </div>
+                  <p>
+                    Finally, you will modify the <span class="sas">Game</span> component to render the currently selected move, instead of always rendering the final move:
+                  </p>
+                  <br>
+                                              <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  const [xIsNext, setXIsNext] = useState(true);
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMove, setCurrentMove] = useState(0);
+   <span class="notis">const currentSquares = history[currentMove];</span>
+
+  // ...
+}
+                            </code>
+</pre>
+                  </div>
+                  <br>
+                  <p>If you click on any step in the game’s history, the tic-tac-toe board should immediately update to show what the board looked like after that step occurred.</p>
+                  
+                  <br>
+                  
+                                              <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=136mz2ptRB5I0QXP24b9nRov6WujWtSf3"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;body>
+    &lt;div id="root">&lt;/div>
+  &lt;/body>
+  &lt;!-- This setup is not suitable for production. -->
+  &lt;!-- Only use it in development! -->
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+  &lt;script
+    async
+    src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"
+  >&lt;/script>
+  &lt;script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  &lt;/script>
+  &lt;script type="text/babel" data-type="module">
+    import React, { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import { useState } from "react";
+
+    function Square({ value, onSquareClick }) {
+      return (
+        &lt;button className="square" onClick={onSquareClick}>
+          {value}
+        &lt;/button>
+      );
+    }
+
+    function Board({ xIsNext, squares, onPlay }) {
+      function handleClick(i) {
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+          nextSquares[i] = "X";
+        } else {
+          nextSquares[i] = "O";
+        }
+        onPlay(nextSquares);
+      }
+
+      const winner = calculateWinner(squares);
+      let status;
+      if (winner) {
+        status = "Winner: " + winner;
+      } else {
+        status = "Next player: " + (xIsNext ? "x" : "O");
+      }
+      return (
+        &lt;>
+          &lt;div className="status">{status}&lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          &lt;/div>
+        &lt;/>
+      );
+    }
+
+    let App = function Game() {
+      const [xIsNext, setXIsNext] = useState(true);
+      const [history, setHistory] = useState([Array(9).fill(null)]);
+      const [currentMove, setCurrentMove] = useState(0);
+      const currentSquares = history[currentMove];
+
+      function handlePlay(nextSquares) {
+        const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+        setHistory(nextHistory);
+        setCurrentMove(nextHistory.length - 1);
+        setXIsNext(!xIsNext);
+      }
+      function jumpTo(nextMove) {
+        setCurrentMove(nextMove);
+        setXIsNext(nextMove % 2 === 0);
+      }
+
+      const moves = history.map((squares, move) => {
+        let description;
+        if (move > 0) {
+          description = "Go to move #" + move;
+        } else {
+          description = "Go to game start";
+        }
+        return (
+          &lt;li>
+            &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+          &lt;/li>
+        );
+      });
+
+      return (
+        &lt;div className="game">
+          &lt;div className="game-board">
+            &lt;Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
+          &lt;/div>
+          &lt;div className="game-info">
+            &lt;ol>{moves}&lt;/ol>
+          &lt;/div>
+        &lt;/div>
+      );
+    };
+
+    function calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      for (let i = 0; i &lt; lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      &lt;StrictMode>
+        &lt;App />
+      &lt;/StrictMode>
+    );
+  &lt;/script>
+  &lt;style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .square {
+      background: #fff;
+      border: 1px solid #999;
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 34px;
+    }
+
+    .board-row:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .status {
+      margin-bottom: 10px;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .game-info {
+      margin-left: 20px;
+    }
+  &lt;/style>
+&lt;/html>
+
+                            </code>
+</pre>
+                  </div>
+                 <br>
+                  <iframe src="https://poste.new-poste.info/p/step-18.html" height=200 width=400></iframe>
+                  <br>  
+                  
+ <hr />
+                </div>
+            </div>
+        </article>
+      
+      <!--Final tidying up-->
+       <article class="my-3" id="form19">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Final tidying up</h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Final tidying up</h2><br /><br />
+                   
+                  <p>Upon close examination of the code, it becomes apparent that when <span class="sas">`currentMove`</span> is even, <span class="sas">`xIsNext`</span> equals true, and when <span class="sas">`currentMove`</span> is odd, <span class="sas">`xIsNext`</span> equals false. <br />This implies that the value of <span class="sas">`xIsNext`</span> can always be determined if the value of <span class="sas">`currentMove`</span> is known.<br />
+
+Storing both of these in the state is unnecessary. <br />It's always advisable to avoid redundant state to minimize bugs and enhance code readability. <br />Therefore, modify the Game so that it doesn't keep <span class="sas">`xIsNext`</span> as a separate state variable, but instead calculates it based on the `currentMove`.</p><br />
+                                                         <div class="container-fixed source">
+<pre><code class="javascript sid">
+export default function Game() {
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMove, setCurrentMove] = useState(0);
+   <span class="notis"> const xIsNext = currentMove % 2 === 0;</span>
+  const currentSquares = history[currentMove];
+
+  function handlePlay(nextSquares) {
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
+   <span class="notis"> }</span>
+
+  function jumpTo(nextMove) {
+    setCurrentMove(nextMove);
+  <span class="notis">}</span>
+  // ...
+  }
+                            </code>
+</pre>
+                  </div> 
+                  <br>
+                  <p>The declaration of the <span class="sas">xIsNext</span> state and the calls to <span class="sas">setXIsNext</span> are no longer necessary. This ensures that <span class="sas">xIsNext</span> will always be in sync with <span class="sas">currentMove</span>, eliminating the possibility of discrepancies, even if there are coding errors in the components.</p>
+                  
+ <hr />
+                </div>
+            </div>
+        </article>
+            <!--Wrapping up -->
+       <article class="my-3" id="form20">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h2>Wrapping up </h2>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">Wrapping up </h2>
+                <ol>
+                
+                  <p>    Well done! You’ve successfully built a tic-tac-toe game that:</p>
+
+<li>Enables you to engage in a game of tic-tac-toe,</li>
+<li>Signals when a player has triumphed in the game,</li>
+<li>Retains the history of a game as it unfolds,</li>
+<li>Permits players to revisit a game’s history and view earlier states of the game board.</li>
+<li>Great job! We trust that you now have a solid understanding of how React operates.</li>
+                  </ol><p>
+                  You can view the final outcome [here].</p>
+                  
+                  <br>
+                                                                       <div class="container-fixed source">
+<pre><button class="copbut" title="Download index.html"><a href="https://drive.google.com/uc?id=1YWj9wVBx4FcEmkZ6fGnm_nxh3XV5T5A7"><i class="bi bi-arrow-bar-down">Download</i></a></button><code class="html sid">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;body>
+    &lt;div id="root">&lt;/div>
+  &lt;/body>
+  &lt;!-- This setup is not suitable for production. -->
+  &lt;!-- Only use it in development! -->
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js">&lt;/script>
+  &lt;script
+    async
+    src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"
+  >&lt;/script>
+  &lt;script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  &lt;/script>
+  &lt;script type="text/babel" data-type="module">
+    import React, { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import { useState } from "react";
+
+    function Square({ value, onSquareClick }) {
+      return (
+        &lt;button className="square" onClick={onSquareClick}>
+          {value}
+        &lt;/button>
+      );
+    }
+
+    function Board({ xIsNext, squares, onPlay }) {
+      function handleClick(i) {
+        if (calculateWinner(squares) || squares[i]) {
+          return;
+        }
+        const nextSquares = squares.slice();
+        if (xIsNext) {
+          nextSquares[i] = "X";
+        } else {
+          nextSquares[i] = "O";
+        }
+        onPlay(nextSquares);
+      }
+
+      const winner = calculateWinner(squares);
+      let status;
+      if (winner) {
+        status = "Winner: " + winner;
+      } else {
+        status = "Next player: " + (xIsNext ? "x" : "O");
+      }
+      return (
+        &lt;>
+          &lt;div className="status">{status}&lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            &lt;Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            &lt;Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            &lt;Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            &lt;Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          &lt;/div>
+          &lt;div className="board-row">
+            &lt;Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            &lt;Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            &lt;Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          &lt;/div>
+        &lt;/>
+      );
+    }
+
+    let App = function Game() {
+      
+      const [history, setHistory] = useState([Array(9).fill(null)]);
+      const [currentMove, setCurrentMove] = useState(0);
+      const xIsNext = currentMove % 2 === 0;
+      const currentSquares = history[currentMove];
+
+      function handlePlay(nextSquares) {
+        const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+        setHistory(nextHistory);
+        setCurrentMove(nextHistory.length - 1);
+
+        
+      }
+      function jumpTo(nextMove) {
+        setCurrentMove(nextMove);
+        
+      }
+
+      const moves = history.map((squares, move) => {
+        let description;
+        if (move > 0) {
+          description = "Go to move #" + move;
+        } else {
+          description = "Go to game start";
+        }
+        return (
+          &lt;li>
+            &lt;button onClick={() => jumpTo(move)}>{description}&lt;/button>
+          &lt;/li>
+        );
+      });
+
+      return (
+        &lt;div className="game">
+          &lt;div className="game-board">
+            &lt;Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
+          &lt;/div>
+          &lt;div className="game-info">
+            &lt;ol>{moves}&lt;/ol>
+          &lt;/div>
+        &lt;/div>
+      );
+    };
+
+    function calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      for (let i = 0; i &lt; lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      &lt;StrictMode>
+        &lt;App />
+      &lt;/StrictMode>
+    );
+  &lt;/script>
+  &lt;style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .square {
+      background: #fff;
+      border: 1px solid #999;
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      margin-right: -1px;
+      margin-top: -1px;
+      padding: 0;
+      text-align: center;
+      width: 34px;
+    }
+
+    .board-row:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .status {
+      margin-bottom: 10px;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .game-info {
+      margin-left: 20px;
+    }
+  &lt;/style>
+&lt;/html>
+
+                            </code>
+</pre>
+                  </div> 
+                  <br>
+                   <iframe src="https://poste.new-poste.info/p/step-18.html" height="150" width="800"></iframe>
+                  <br>
+                  <p>If you're looking to further hone your newly acquired React skills or have some spare time, here are some enhancements you could apply to the tic-tac-toe game, listed from easiest to hardest:</p>
+                  <ul>
+<li>- Display "You are at move #..." instead of a button, but only for the current move.</li>
+<li>- Refactor Board to utilize two loops for generating the squares, rather than hardcoding them.</li>
+<li>- Incorporate a toggle button that allows you to sort the moves in either ascending or descending order.</li>
+<li>- When a player wins, highlight the three squares that led to the victory. If the game ends in a draw, show a message indicating so.</li>
+<li>- In the move history list, show the location of each move in the format (row, col).</li>
+                  </ul><p>
+Throughout this tutorial, you've explored React concepts such as elements, components, props, and state. Now that you've seen how these concepts are applied in game development, you might want to read Thinking in React to understand how these same concepts are used in building an app's UI.
+                  </p>
+ <hr />
+                </div>
+            </div>
+        </article>
+  </section>
+</div>
+</span> 
+</body>
+</html>
