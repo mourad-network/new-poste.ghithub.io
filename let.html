@@ -1,0 +1,775 @@
+  
+
+   <DOCTYPE html>
+<html>
+   
+<head>
+  <title>Javascript Let</title>
+  <link href="style.css">
+</head>
+<body>
+    <!--Custom styles for this template-->
+   <span class="bg-body-tertiary">
+
+ 
+<aside class="bd-aside sticky-xl-top text-body-secondary align-self-start mb-3 mb-xl-5 px-2">
+   <br />
+     <nav class="small" id="toc">
+      <h4>On This Pages</h4>
+      <ul class="list-unstyled ps-3 ide sid">
+
+  <li><a class="d-inline-flex align-items-center rounded text-decoration-none nav-link" href="#form">javascript let</a></li>
+  <li><a class="d-inline-flex align-items-center rounded text-decoration-none nav-link" href="#form1">Jblock scope functions?</a></li>
+  <li><a class="d-inline-flex align-items-center rounded text-decoration-none nav-link" href="#form2">Redeclaring Variables</a></li>
+  <li><a class="d-inline-flex align-items-center rounded text-decoration-none nav-link" href="#form3">
+    differences between var, let and const</a></li>
+   <li><a class="d-inline-flex align-items-center rounded text-decoration-none nav-link" href="#form4">
+    Redeclaring</a></li>
+
+</ul>
+      <hr /> <h4>Javascript</h4>
+<ul class="list-unstyled id">
+    <li class="my-2">
+        
+        <ul class="list-unstyled ps-3">
+
+
+            <li class="bas">JS Tutorial</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-home.html">JS HOME</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-introduction.html">JS Introduction</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-wher-to.html">JS Where To</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-output.html">JS Output</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-statement.html">JS Statements</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-syntax.html">JS Syntax</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-comment.html">JS Comments</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-variables.html">JS Variables</a></li>
+            <li style="background-color: rgba(237, 5, 243, 0.29);"><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-let.html">JS Let</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-cont.html">JS Const</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-operateur.html">JS Operators</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-arithmetic.html">JS Arithmetic</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-assignment.html">JS Assignment</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-data-types.html">JS Data Types</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function.html">JS Functions</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-objects.html">JS Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-event.html">JS Events</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-strings.html">JS Strings</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-strings-methods.html">JS String Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-string-search.html">JS String Search</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-string-templates.html">JS String Templates</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-numbers.html">JS Numbers</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-bigint.html">JS BigInt</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-tutorial.html">JS Number Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-number-properties.html">JS Number Properties</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-arrays.html">JS Arrays</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-array-methods.html">JS Array Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-aray-sort.html">JS Array Sort</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-aray-iteration.html">JS Array Iteration</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-aray-const.html">JS Array Const</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dats.html">JS Dates</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-date-formats.html">JS Date Formats</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-date-get-methods.html">JS Date Get Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-tutorial.html">JS Date Set Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-math.html">JS Math</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-random.html">JS Random</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-booleans.html">JS Booleans</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-comparisons.html">JS Comparisons</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-if-else.html">JS If Else</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-szitch.html">JS Switch</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-for.html">JS Loop For</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-for-in.html">JS Loop For In</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-for-of.html">JS Loop For Of</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-loop-while.html">JS Loop While</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-break.html">JS Break</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-iterables.html">JS Iterables</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-sets.html">JS Sets</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-maps.html">JS Maps</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-typof.html">JS Typeof</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-type-convertion.html">JS Type Conversion</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-bitwise.html">JS Bitwise</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-regexp.html">JS RegExp</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-precedence.html">JS Precedence</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-errors.html">JS Errors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-scope.html">JS Scope</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-hoisting.html">JS Hoisting</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-strict-mode.html">JS Strict Mode</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-this-keyword.html">JS this Keyword</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-arroz-function.html">JS Arrow Function</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-classes.html">JS Classes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-modules.html">JS Modules</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json.html">JS JSON</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-debugging.html">JS Debugging</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-style-guide.html">JS Style Guide</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-best-pratices.html">JS Best Practices</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-mistakes.html">JS Mistakes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-performance.html">JS Performance</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-reserved-words.html">JS Reserved Words</a></li>
+        </ul>
+
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Versions</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-virsions.html">JS Versions</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2009.html">JS 2009 (ES5)</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2015.html">JS 2015 (ES6)</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2016.html">JS 2016</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2017.html">JS 2017</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2018.html">JS 2018</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2019.html">JS 2019</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2020.html">JS 2020</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-2021-2022.html">JS 2021/2022</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ie-edge.html">JS IE / Edge</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-history.html">JS History</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Objects</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-definitions.html">Object Definitions</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-properties.html">Object Properties</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-methods.html">Object Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-display.html">Object Display</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-accessoirs.html">Object Accessors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-constructors.html">Object Constructors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-prototypes.html"> Object Prototypes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-iterables.html">Object Iterables</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-sets.html">Object Sets</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-maps.html"> Object Maps</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-object-reference.html"> Object Reference</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS Functions</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-definitions.html">Function Definitions</a>
+            </li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-parameters.html"> Function Parameters</a>
+            </li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-invocations.html">Function Invocation</a>
+            </li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-call.html"> Function Call</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-apply.html"> Function Apply</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-bind.html"> Function Bind</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-function-closures.html"> Function Closures</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Classes</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-class-into.html">Class Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-class-inheritance.html">Class Inheritance</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-class-static.html"> Class Static</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Async</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-callbacks.html"> JS Callbacks</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-asynchronous.html"> JS Asynchronous</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-promises.html">JS Promises</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-async-await">JS Async/Await</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS HTML DOM</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-intro.html">DOM Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-methods.html"> DOM Methods</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-document.html"> DOM Document</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-element.html"> DOM Elements</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-html.html">DOM HTML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-domforms.html"> DOM Forms</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-css.html"> DOM CSS</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-animations.html"> DOM Animations</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-events.html">DOM Events</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-event-listener.html"> DOM Event Listener</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-navigetion.html"> DOM Navigation</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-nodes.html"> DOM Nodes</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-collections.html"> DOM Collections</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-dom-node-listes.html"> DOM Node Lists</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS Browser BOM</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-window.html"> JS Window</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-screen.html">JS Screen</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-location.html"> JS Location</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-history.html"> JS History</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-navigateur.html"> JS Navigator</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-popup-alert.html"> JS Popup Alert</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-timing.html"> JS Timing</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-cookies.html"> JS Cookies</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS Web APIs</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-api-intro.html"> Web API Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-forms-api.html"> Web Forms API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-history-api.html"> Web History API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-storage-api.html"> Web Storage API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-worker-api.html"> Web Worker API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-fetch-api.html"> Web Fetch API</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-web-geolocation-api.html"> Web Geolocation API</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS AJAX</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-intro.html"> AJAX Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-xmlhttp.html"> AJAX XMLHttp</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-request.html"> AJAX Request</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-response.html"> AJAX Response</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-xml-file.html"> AJAX XML File</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-php.html"> AJAX PHP</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-asp.html"> AJAX ASP</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-database.html"> AJAX Database</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-applications.html"> AJAX Applications</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-ajax-examples.html"> AJAX Examples</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas"> JS JSON</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-intro.html">JSON Intro</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-syntax.html">JSON Syntax</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-vs-xml.html">JSON vs XML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-data-types.html">JSON Data Types</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-parse.html">JSON Parse</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-stringify.html">JSON Stringify</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-objects.html">JSON Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-arrys.html">JSON Arrays</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-server.html">JSON Server</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-php.html">JSON PHP</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-html.html">JSON HTML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-json-jsonp.html">JSON JSONP</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS vs jQuery</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-selecteurs.html">jQuery Selectors</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-html.html">jQuery HTML</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-css.html">jQuery CSS</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-jquery-dom.html">jQuery DOM</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Graphics</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-graphics.html">JS Graphics</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-canvas.html">JS Canvas</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-plotly.html">JS Plotly</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-chartjs.html">JS Chartjs</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-google-chart.html">JS Google Chart</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-d3-js.html">JS D3 js</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS Examples</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-examples.html">JS Examples</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-dom.html">JS HTML DOM</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-input.html">JS HTML Input</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-object.html">JS HTML Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-html-event.html">JS HTML Events</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-browser.html">JS Browser</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-editeus.html">JS Editor</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-exercises.html">JS Exercises</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-quiz.html">JS Quiz</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-bootcamp.html"> JS Bootcamp</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-certificate.html">JS Certificate</a></li>
+        </ul>
+        <ul class="list-unstyled ps-3">
+
+            <li class="bas">JS References</li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/javascript-opjects.html">JavaScript Objects</a></li>
+            <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="https://www.new-poste.info/p/html-dom-opjects.html">HTML DOM Objects</a></li>
+        </ul>
+
+    </li>
+</ul>
+<style>
+
+    .di{
+        font-weight: 700;
+    }
+</style>
+    </nav>
+</aside>
+   
+   
+       
+       
+<div class="bd-cheatsheet container-fluid bg-body">
+   
+    <section id="content">
+      <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3"><a class="nav-link" href="#cont"></a></h2>
+        <!--javascript let-->
+       <article class="my-3" id="form">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                
+               <h1>javascript let</h1>
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                   <h2 class="text-center">how does let work in javascript</h2><br /><br />
+                    <button class="btn btn-primary" type="button"><a class="nav-link" href="https://www.new-poste.info/p/javascript-variables.html"> ❮ Previous</a></button>
+                   <button class="btn btn-primary" style="float: right;" type="button">
+                    <a class="nav-link" href="https://www.new-poste.info/p/javascript-cont.html"> Next ❯</a></button><br /><br /><div class="lil">
+                  <label>Here are the frequently asked questions about The <span class="sas">let</span> keyword</label>
+                  <br /><ol>
+                 <li>When were keywords introduced in The <span class="sas">let</span> keyword In javascript<ul>
+                   <li>In javascript  The <span class="sas">let</span> keyword was introduced in <a  href="https://www.new-poste.info/p/javascript-2015.html">ES6 (2015)</a></li></ul></li>
+                  
+                <li>Can variables in The keyword <span class="sas">let</span> take another block?
+                  <ul>
+                   <li> All variables listed in The keyword <span class="sas">let</span> cannot be changed. </li></ul>
+                  </li> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                  <li>What is the most important thing to focus on before starting to use The keyword <span class="sas">let</span> in Javascript<ul>
+                   <li>Before proceeding with the use of The keyword <span class="sas">let</span> in Javascript all variables must be declared. </li></ul></li>
+                    
+                    
+                    
+                    
+                    
+                   <li>Can a variable The keyword <span class="sas">let</span> take forms in Javascript<ul>
+                   <li>Variables already defined in The keyword <span class="sas">let</span> in Javascript cannot take another block.</li></ul></li>
+                  </ol>
+                  </div>
+                 <p>In The keyword <span class="sas">let</span> you cannot re-declare a variable more than once<br>
+                   This example shows how?</p>
+                  
+              
+                  <div class="notis">Rejected case with The keyword <span class="sas">let</span> in Javascript</div>
+                                    <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('a1')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+let x = "Mourad";
+
+let x = 7;
+
+                            </code>
+</pre>
+                  </div>  
+                  <span id="a1"><!--
+let x = "Mourad";
+
+let x = 7;
+--></span><br />
+                  <p class="note">But in case <span class="sas">var</span> in Javascript it is possible</p> 
+           <br />
+              
+                                                <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('a2')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+var x = "Mourad";
+
+var x = 7;
+                            </code>
+</pre>
+                  </div>        
+                  <span id="a2"><!--
+var x = "Mourad";
+
+var x = 7;--></span>      
+                  
+      
+                  
+ <hr />
+                </div>
+            </div>
+        </article>
+       
+       <!--block scope functions?-->
+       <article class="my-3" id="form1">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+               
+                 <h2>block scope functions?</h2>
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>block scope functions?</h2><br /><br />
+                  <p>Before ES6 (2015), JavaScript had Global Scope and Function Scope.<br>
+                  ES6 introduced two important new JavaScript keywords: <span class="sas">let</span> and <span class="sas">const</span>.<br>
+
+These two keywords provide Block Scope in JavaScript.<br>
+
+Variables declared inside a <span class="sas">{ }</span> block cannot be accessed from outside the block:<br>
+                  </p>
+                  
+                   <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('a3')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+{
+let x = 7;
+}
+
+
+//In this case, it cannot be used x here
+                            </code>
+</pre>
+                  </div>  
+                  <span id="a3"><!--
+{
+let x = 7;
+}
+//In this case, it cannot be used x here
+--></span><br /><p class="note">Variables declared with the  <span class="sas">var</span>  keyword can NOT have block scope.
+
+Variables declared inside a  <span class="sas">{ }</span>  block can be accessed from outside the block.</p><br />
+                                     <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('a4')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+{
+var x = 7;
+}
+
+// x CAN be used here
+
+                            </code>
+</pre>
+                  </div>            
+                  <span id="a4"><!--
+{
+var x = 7;
+}
+
+// x CAN be used here
+
+--></span>
+                  <div class="note"><ul><legend>Note</legend>
+                  <li>A block scope in JavaScript is a scope that defines the availability of variables within the code. </li>
+            <li>It can be declared using curly braces <span class="sas">{}</span>.</li>
+                    <li>Scopes can be created within scopes. Variables within scopes can be declared using <span class="sas">let</span> or const.</li>
+                   <li> Variables created in parent scope can be used in child scopes. </li>
+                    <li>Variables created in sub scopes cannot be used in the parent scope.</li>
+                  </ul>
+                  </div>  
+             
+                  <hr />
+              </div>
+         </div>
+         </article>
+      <!--Redeclaring Variables-->
+       <article class="my-3" id="form2">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+              <h2>Redeclaring Variables</h2>
+                
+            </div>
+
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                    <h2>Redeclaring Variables</h2><br /><br />
+                   
+                  <p>Redeclaring a variable is useful in situations where it cannot be known if the variable has already been defined. By redeclaring a variable conditionally,</p>
+<ol>
+  <li>Redeclaring a variable means to declare an already declared variable or identifier again. </li>
+  <li>Depending on the programming language and the scope of the variable, redeclaring a variable can have different effects. </li>
+<li> in JavaScript, redeclaring a variable with <span class="sas">var</span> can overwrite the previous value, </li>
+  </ol>
+
+ <br />
+                 
+                    <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('a7')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javaScript sid"> 
+
+var x = 20
+// Here x is 20
+
+{
+var x = 4;
+// Here x is 4
+}
+
+// Here x is 4
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/redeclaring-variable-using-var.html" target="_blank">Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <span id="a7"><!--
+var x = 20
+// Here x is 20
+
+{
+var x = 4;
+// Here x is 4
+}
+
+// Here x is 4
+--></span>
+                  
+            <p>while redeclaring a variable with <span class="sas">let</span> can create a new variable in a different block.</p>
+                  
+                  
+                  
+                  
+                  
+                                     <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('a8')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javaScript sid"> 
+
+let = 20
+// Here x is 20
+
+{
+let = 4;
+// Here x is 4
+}
+
+// Here x is 4
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/redeclaring-variable-using-let.html" target="_blank">Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <span id="a8"><!--
+let = 20
+// Here x is 20
+
+{
+let = 4;
+// Here x is 4
+}
+
+// Here x is 4
+--></span>
+                  <br />
+                  
+                  
+                 <hr />
+                <p></p><p></p></div>
+            </div>
+    </article>
+        
+      <!--differences between var, let and const-->
+        <article class="my-3" id="form3">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <h3> var, let and const</h3>
+                
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                      <h2>the differences between var, let and const</h2>
+                 <ol>
+<span class="sas">var</span>, <span class="sas">let</span>, and <span class="sas">const</span> are keywords to declare variables in JavaScript. They have different scopes and behaviors.
+
+<li><span class="sas">var</span> variables are globally or function scoped, and can be updated and re-declared within their scope.</li>
+<li><span class="sas">let</span> variables are block scoped, and can be updated but not re-declared within their scope.</li>
+<li><span class="sas">const</span> variables are also block scoped, but they cannot be updated or re-declared within their scope.</li>
+                  <li><span class="sas">const</span> creates constants that cannot be changed or redeclared, while let and var create variables that can be reassigned </li>
+                  
+                  
+                  </ol><div class="note">
+It is recommended to use <span class="sas">let</span> or <span class="sas">const</span> instead of <span class="sas">var</span>, as they provide more clarity and prevent errors.</div>
+
+                               
+             
+                  <br />
+                  <h3>This Table For the differences between var, let and const</h3>
+                  <table class="table table-sm table-bordered">
+    <tbody >
+        <tr ></tr>
+        <tr >
+            <td ></td>
+            <td scope="col">Scope</td>
+            <td scope="col">Redeclare</td>
+            <td scope="col">Reassign</td>
+            <td scope="col">Hoisted</td>
+            <td scope="col">Binds this</td>
+        </tr>
+        <tr >
+            <td >var</td>
+            <td >No</td>
+            <td >Yes</td>
+            <td >Yes</td>
+            <td >Yes</td>
+            <td >Yes</td>
+        </tr>
+        <tr >
+            <td >let</td>
+            <td >Yes</td>
+            <td >No</td>
+            <td >Yes</td>
+            <td >No</td>
+            <td >No</td>
+        </tr>
+        <tr >
+            <td >const</td>
+            <td >Yes</td>
+            <td >No</td>
+            <td >No</td>
+            <td >No</td>
+            <td >No</td>
+        </tr>
+    </tbody>
+</table>
+                  <h2>The Best Of <span class="sas">const</span> and <span class="sas">let</span></h2>       
+                <ul>
+                  <li><span class="sas">const</span> and <span class="sas">let</span>  from keywords in Javascript have a block range </li>
+                   <li>  As for redefining variables, the <span class="sas">const</span> and <span class="sas">let</span> cannot</li>
+                  <li>  When it comes to <span class="sas">const</span> and <span class="sas">let</span> the programmer has to set them both before starting to edit the code.</li>
+                  
+                  <li> Actually, variables defined with <span class="sas">let</span> and <span class="sas">const</span> are hoisted to the top of the block, but not initialized. Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared. Using a let or const variable before it is declared will result in a ReferenceError</li>
+                  </ul> 
+                  <p class="note"><span class="sad">Note</span>
+let and <span class="sas">const</span> variables are hoisted, but they are not initialized with a default value like <span class="sas">var</span> variables. <br>This means they cannot be accessed before their declaration, unlike var variables which are initialized with undefined. <br>Also, <span class="sas">let</span> and <span class="sas">const</span> variables are block scoped, meaning they only exist within the block where they are declared <span class="sas">var</span> variables are either global scoped or function scoped.<br> Therefore, <span class="sas">let</span> and <span class="sas">const</span> variables do not bind to the global object this, while var variables do
+                  
+                  </p>
+                  <h2>for more information </h2>
+                  <p class="sid notis">
+                     The <span class="sas">var</span> keyword is used to declare variables that are function scoped or global scoped. <br>
+This means that the variables declared with var can be accessed within the function where they are defined, or anywhere in the code if they are not inside a function. 
+The <span class="sas">var</span> keyword also allows hoisting, which means that the variables can be used before they are declared. <br>
+ However, this can lead to some confusion and errors, so it is recommended to declare the variables at the top of the scope.  <br>
+The <span class="sas">var</span> keyword also binds the variables to the this object, which refers to the current context of the code. 
+
+                  </p>
+                  <h2>Browser Support</h2>
+                  <p><span class="sas">let</span> and <span class="sas">const</span> are not supported in Internet Explorer 11 or earlier, but they are supported by all modern browsers</p>
+                 <hr />
+                </div>
+            </div>
+        </article>
+         <!--Redeclaring-->
+        <article class="my-3" id="form4">
+            <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                <h3>Redeclaring Variables</h3>
+                
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="modal-button">
+                      <h2>Redeclaring Variables</h2>
+                  <p>Redeclaring a variable means declaring it again with the same name. In JavaScript, you can redeclare a variable using the <span class="sas">var</span> keyword, but this can cause some problems. For example:</p>
+
+                                
+             
+                  
+                  <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('v1')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+var x = 10; // global variable
+console.log(x); // 10
+function foo() {
+  var x = 20; // local variable
+  console.log(x); // 20
+}
+foo();
+console.log(x); // 10
+
+
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/redeclaring.html" target="_blank">Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <span id="v1"><!--
+var x = 10; // global variable
+console.log(x); // 10
+function foo() {
+  var x = 20; // local variable
+  console.log(x); // 20
+}
+foo();
+console.log(x); // 10
+
+--></span>
+                  <br />
+                  <p>In this code, there are two variables named <span class="sas">x</span>, one in the global scope and one in the function scope. They have different values and do not affect each other.
+
+However, if you redeclare a variable with <span class="sas">var</span> in a different scope or block, it can change the value of the outer variable too. <br>For example:</p>
+                                  <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('v2')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+var x = 10; // global variable
+console.log(x); // 10
+if (true) {
+  var x = 20; // redeclared variable
+  console.log(x); // 20
+}
+console.log(x); // 20
+
+
+
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/redeclare-variable.html" target="_blank">Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <span id="v2"><!--
+var x = 10; // global variable
+console.log(x); // 10
+if (true) {
+  var x = 20; // redeclared variable
+  console.log(x); // 20
+}
+console.log(x); // 20
+
+
+--></span>
+              <br>
+                  <p>In this code, there is only one variable named x, which is in the global scope. The var keyword inside the if block does not create a new variable, but reassigns the existing one. This can lead to unexpected results and bugs.<br>
+
+To avoid this problem, you can use the let or const keywords instead of var, which create block-scoped variables that do not affect the outer scope. For example:</p>
+                  
+                                                    <div class="container-fixed source">
+<pre><button class="copbut" onclick="copyToClipboard('v3')" title="click to copy"><i class="bx bx-copy-alt">Copy</i></button><code class="javascript sid"> 
+let x = 10; // global variable
+console.log(x); // 10
+if (true) {
+  let x = 20; // block-scoped variable
+  console.log(x); // 20
+}
+console.log(x); // 10
+
+
+
+
+                            </code>
+</pre>
+                  </div>   <button class="btn btn-primary" type="button"><a class="nav-link" href="https://poste.new-poste.info/p/one-variable-named-x.html" target="_blank">Get Coding&gt;&gt;&gt;</a>
+</button>            
+                  <span id="v3"><!--
+let x = 10; // global variable
+console.log(x); // 10
+if (true) {
+  let x = 20; // block-scoped variable
+  console.log(x); // 20
+}
+console.log(x); // 10
+
+
+
+--></span>
+                   <h2 class="text-center">how does let work in javascript</h2><br /><br />
+                    <button class="btn btn-primary" type="button"><a class="nav-link" href="https://www.new-poste.info/p/javascript-variables.html"> ❮ Previous</a></button>
+                   <button class="btn btn-primary" style="float: right;" type="button">
+                    <a class="nav-link" href="https://www.new-poste.info/p/javascript-cont.html"> Next ❯</a></button>
+                  <hr />
+                </div>
+            </div>
+        </article>
+      
+  <!------------------------------------------------------------------------------------------>    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+   
+  </section>
+</div>
+</span> 
+</body>
+</html>
